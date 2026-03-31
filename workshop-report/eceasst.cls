@@ -41,7 +41,7 @@
 % Graphics
 \RequirePackage{graphicx}
 % Colors
-\RequirePackage{color}
+\RequirePackage{xcolor}
 \definecolor{easstblue}{rgb}{.05,.32,.66}
 % ======================
 % Package for Hyperlinks
