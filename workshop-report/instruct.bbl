@@ -227,4 +227,23 @@ Talk at Fanstord University (this is a full UNPUBLISHED entry).
 \bibitem[Vol]{random-note-crossref}
 Volume~2 is listed under Knuth \cite{book-full}.
 
+\bibitem[Moh+26]{Mohammadietal2026}
+M.~Mohammadi, K.~Politt, and A.~Jorschick.
+Assessing data management and compliance in large research collaborations via knowledge bases: A semi-structured interview approach.
+\emph{F1000Research}, 15:37, 2026.
+doi:10.12688/f1000research.173178.1.
+[v1; peer reviews: 2 ‘approved with reservations’].
+
+\bibitem[GDP16]{GDPR2016}
+GDPR.
+Regulation (EU) 2016/679 of the European Parliament and of the Council.
+\emph{Official Journal of the European Union}, L 119:1--88, 2016.
+Available at: \texttt{https://data.europa.eu/eli/reg/2016/679/oj}.
+
+\bibitem[Wil+16]{WilkinsonDumontier2016}
+M.~D. Wilkinson, M.~Dumontier, I.~J. Aalbersberg, et~al.
+The FAIR Guiding Principles for scientific data management and stewardship.
+\emph{Scientific Data}, 3:160018, 2016.
+doi:10.1038/sdata.2016.18.
+
 \end{thebibliography}
