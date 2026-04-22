@@ -310,47 +310,14 @@ Possible keywords: education topics, training others, training of ourselves(e.g.
 	- problem: lack of publications
 
 \subsection{Reproducibility, Quality and Validation of the artifacts we are creating}
-Having received proper training, how do we validate the artifacs that are created during our work?\\
-Possible keywords: long term archiving measures, containerization, research and software reproducibility, Verification and Validation(e.g. Performance), Software quality, badges,\\
+Having received proper training, how do we validate the artifacts that are created during our work?\\
+Possible keywords: long term archiving measures, containerization, research and software reproducibility, Verification and Validation (e.g. Performance), Software quality, badges,\\
 
-Discussion Group 1 \\
-Visualisation of data, then verification by experts. Patients data is very sensitive and confidential.
-Using AI to suggest metadata.
-Pipeline to prepare the final check by human in the loop.
+The workshop discussions established that while automated tools are rapidly advancing, human expertise remains central to artifact validation. In fields dealing with sensitive clinical or animal data, researchers are increasingly adopting a "human-in-the-loop" approach. Within this framework, machine learning models and locally-hosted or privacy preserving Large Language Models (LLMs) are utilized to suggest metadata or classify complex datasets, which are then verified through expert visualization and manual checks. This method ensures that data privacy is maintained while leveraging AI to handle the increasing volume of research outputs.
 
-From poster notes: Integrate data and pipelines from different repos at different locations:
-- Quality checks from each source individually.
-- Manual checks, visulization by experts.
-- ML classification of metadata in natural sciences.
+Technical validation becomes more complex as software grows in scale, requiring sophisticated containerization and environment management. Participants identified tools such as Pixi and the MaRDI packaging system as essential for managing dependencies and namespaces in large-scale projects. For dynamic datasets that change over time, static identifiers alone are often insufficient to guarantee reproducibility. Instead, modular Jupyter notebooks and data chunking strategies are used to document specific states and edge cases, ensuring results can be reconstructed even when the underlying data is not static. Furthermore, implementing CI/CD pipelines and automated testing allows for the continuous monitoring of software quality, specifically checking for breaking changes or inconsistencies caused by random seeds and stochastic processes.
 
-
-Discussion Group 2\\
-AI problem. Containerisation. The bigger the software the harder it is.
-Namespaces.
-
-mardi packaging sytem.
-
-Already know, probelm how to implement.
-
-Dynamic datasets, difficult to reproduce. Chunk, with doi jupyter notebook file this is the way document edge cases For each edge case there is a special going to notebooks with peer review. hundreds run through. different results dynamic data random seeds. what there percentage likelihood. Containerisation. specific solutions where was the data not the url but the actual data. Hackatons. dependencies not declared modular not found data files.
-
-Pixy python giga science
-
-Jülich model for ariculture reproducibility for decades geo
-
-
-Discussion Group 3\\
-
-Human in the loop, Survey data and tool. Metadata extraction.
-Human sensititve data rom clinique long term hard drives usability?
-
-DaRUS Upload to. But the user did he do a good job in metadata.
-GitLab, GitHub. RDM with LLMs. Locally hosted. open router. Temperature not controlable. Metadata extraction by the help of the researchers no problem if animals.
-
-Good documentation examples Jupyter notebook. ELNs chemotion, sciformation.
-eLabFTW.
-
-Automatic tests to reproduce check if everything breaks. CI/CD pipelines. Some tests are random to check if everything works what ever the case.
+Finally, the long-term quality of artifacts depends on the rigorous use of Electronic Lab Notebooks (ELNs) like Chemotion, eLabFTW, and Sciformation to capture  experimental procedures and data provenance at the point of origin. Integrating ELNs with established repositories like Dataverse/DaRUS enables structured, metadata-rich publication of experimental data, while version control platforms like GitHub support the parallel management of research software. Despite these tools, the workshop highlighted a persistent gap in the quality of researcher-provided metadata, pointing to the need for better training and workflow integration to ensure artifacts remain verifiable and reusable over the long term.
 
 
 \subsection{Workflows and pipelines}
