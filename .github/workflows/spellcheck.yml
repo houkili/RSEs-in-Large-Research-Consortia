@@ -1,0 +1,16 @@
+name: 'spellcheck'
+on: [push, pull_request]
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install packages
+        run: sudo apt install -y locales locales-all aspell aspell-en
+      - name: Setup locale
+        run: sudo locale-gen en_GB en_GB.UTF-8
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+      - name: run spellchecker
+        run: |
+          # run spell checker on file
+          bash spellcheck.sh workshop-report/report.tex

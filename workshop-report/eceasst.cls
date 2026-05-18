@@ -127,11 +127,11 @@
 % Author(s) and institutes
 \newcommand{\ecauthor}{No \texttt{$\backslash$author} defined!}
 \renewcommand{\author}[1]{\renewcommand{\ecauthor}{#1}\setcounter{page}{1}\hypersetup{pdfauthor={#1}}}
-\newcommand{\autref}[1]{\if\thepage0\else\hyperlink{aut#1}{$^#1$}\fi}
+\newcommand{\autref}[1]{\if\thepage0\else\hyperlink{aut#1}{$^{#1}$}\fi}
 \newcommand{\sponsor}[1]{\if\thepage0\else\footnote{#1}\fi}
 \newcommand{\ecinstitute}{No \texttt{$\backslash$institute} defined!}
 \newcommand{\institute}[1]{\renewcommand{\ecinstitute}{#1}}
-\newcommand{\autlabel}[1]{\hypertarget{aut#1}{$^#1$}}
+\newcommand{\autlabel}[1]{\hypertarget{aut#1}{$^{#1}$}}
 % Abstract and keywords
 \newcommand{\ecabstract}{No \texttt{$\backslash$abstract} defined!}
 \renewcommand{\abstract}[1]{\renewcommand{\ecabstract}{#1}}

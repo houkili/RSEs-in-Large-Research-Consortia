@@ -9,6 +9,8 @@
 \usepackage{orcidlink}
 \usepackage{accsupp}
 \usepackage{todonotes}
+\usepackage{lineno}
+\linenumbers
 
 %Mathematical formula accessibility and machine-readability: if you add
 \usepackage[accsupp]{axessibility}
@@ -23,6 +25,7 @@
 
 \newcommand{\Eg}{E.\,g.}
 \newcommand{\eg}{e.\,g.}
+\newcommand{\ie}{i.\,e.}
 
 % ================================
 % Environment for AI Use
@@ -44,57 +47,64 @@
 \definecolor{easstblue}{rgb}{.05,.32,.66}
 
 
-\title{INF Projects in Germany's CRCs --- an overview and lessons learned}
+\title{INF Projects in Germany's CRCs --- an overview and lessons learnt}
 \short{INF Projects in Germany's CRCs}
 
 \author{
 Hamza Oukili\authorOrcid{0000-0003-4695-8532}\authorRef{1},
 Florian Goth\authorOrcid{0000-0003-2707-4790}\authorRef{2},
-Frank Löffler\authorOrcid{0000-0001-6643-6323}\authorRef{3},
-Mercedes Martinez Bruera\authorOrcid{0009-0004-2891-7045}\authorRef{4},
+Frank Löffler\authorOrcid{0000-0001-6643-6323}\authorRef{3}${}^,$\authorRef{16},
+Mercedes~Martinez~Bruera\authorOrcid{0009-0004-2891-7045}\authorRef{4},
 Ron Dockhorn\authorOrcid{0000-0002-5268-5430}\authorRef{8},
 Alvaro Aguilera\authorOrcid{0000-0001-9324-8555}\authorRef{8},
-Jan Frenzel\authorOrcid{0009-0007-5755-1427}\authorRef{8},
+Bernd~Flemisch\authorOrcid{0000-0001-8188-620X}\authorRef{1},
+David Leiser\authorOrcid{0000-0003-0949-8194}\authorRef{14},
+Franziska Tuttas\authorOrcid{0000-0003-3898-0908}\authorRef{14},
+Jan~Frenzel\authorOrcid{0009-0007-5755-1427}\authorRef{8},
 Fabian~Prasser\authorOrcid{0000-0003-3172-3095}\authorRef{5},
-Michael~Gnädig\authorOrcid{}\authorRef{5},
+Michael~Gnädig\authorRef{5},
 Marco~Johns\authorOrcid{0000-0003-4706-6595}\authorRef{5},
 Maija~Poikela\authorOrcid{0000-0003-2616-4401}\authorRef{5}, 
 Tobias~Penzkofer\authorOrcid{0000-0001-9591-8575}\authorRef{6}, 
 Lisa~Franziska~Buchauer\authorOrcid{0000-0002-4722-8390}\authorRef{6},
-Aristotelis~Misios\authorOrcid{}\authorRef{6},
-Maryam Mohammadi\authorOrcid{0009-0007-8747-029X}\authorRef{7},
+Aristotelis~Misios\authorRef{6},
+Maryam~Mohammadi\authorOrcid{0009-0007-8747-029X}\authorRef{7},
 Lincoln Sherpa\authorOrcid{0009-0000-3287-0295}\authorRef{8},
-Aaruni Kaushik\authorOrcid{0009-0006-3061-6553}\authorRef{9},
+Aaruni~Kaushik\authorOrcid{0009-0006-3061-6553}\authorRef{9},
 Neele~Drobnitzky\authorOrcid{0000-0002-3181-941X}\authorRef{10},
 Jenna Swarthout Goddard\authorOrcid{0000-0002-0181-0828}\authorRef{11},
 Michael Hanke\authorOrcid{0000-0001-6398-6370}\authorRef{11},
-Ralph Müller-Pfefferkorn\authorOrcid{0000-0001-8719-5741}\authorRef{8}
-Michael Hanke\authorOrcid{0000-0001-6398-6370}\authorRef{11}
+Ralph~Müller-Pfefferkorn\authorOrcid{0000-0001-8719-5741}\authorRef{8},
 Philipp Breidenbach\authorOrcid{0000-0002-1506-7350}\authorRef{12},
-Paul Bürkner\authorOrcid{0000-0001-5765-8995}\authorRef{13},
-Andreas Groll\authorOrcid{0000-0001-6787-9118}\authorRef{13},
+Michael Hanke\authorOrcid{0000-0001-6398-6370}\authorRef{11}
+Paul~Bürkner\authorOrcid{0000-0001-5765-8995}\authorRef{13},
+Andreas~Groll\authorOrcid{0000-0001-6787-9118}\authorRef{13},
 Svenja Jedhof\authorOrcid{0009-0008-2939-9103}\authorRef{13},
 Rouven Michels\authorOrcid{0000-0002-5433-6197}\authorRef{13},
 Philip Raatz\authorOrcid{0000-0002-9133-0077}\authorRef{12},
-Helena Rahaus\authorOrcid{0009-0009-8843-8528}\authorRef{12}
-Jan Linxweiler\authorOrcid{0000-0002-2755-5087}\authorRef{14}
+Helena~Rahaus\authorOrcid{0009-0009-8843-8528}\authorRef{12},
+Victor Dudarev\authorOrcid{0000-0001-7243-9096}\authorRef{15},
+Jan Linxweiler\authorOrcid{0000-0002-2755-5087}\authorRef{17}
 } % Authors and references to addresses
 
 \institute{% Institutes with labels
-\autlabel{1} Institute for Modeling Hydraulic and Environmental Systems (IWS), University of Stuttgart,\\
-\autlabel{2} Institut für theoretische Physik 1, University of Würzburg, 97074, Würzburg,\\
+\autlabel{1} Institute for Modeling Hydraulic and Environmental Systems (IWS), University of Stuttgart, Germany,\\
+\autlabel{2} Institut für theoretische Physik 1, University of Würzburg, 97074, Würzburg, Germany,\\
 \autlabel{3} Heinz Nixdorf Chair for Distributed Information Systems, Jena, Germany,\\
-\autlabel{4} Goethe-Universität Frankfurt am Main, Frankfurt am Main,\\
+\autlabel{4} Goethe-Universität Frankfurt am Main, Frankfurt am Main, Germany,\\
 \autlabel{5} Berlin Institute of Health at Charité - Universitätsmedizin Berlin, Berlin, Germany\\
 \autlabel{6} Charité - Universitätsmedizin Berlin, Berlin, Germany,\\
-\autlabel{7} Linguistic Department, University of Bielefeld,\\
+\autlabel{7} Linguistic Department, University of Bielefeld, Germany,\\
 \autlabel{8} Center for Interdisciplinary Digital Sciences, Technische Universität Dresden, D-01069 Dresden, Germany,\\
 \autlabel{9} Fachbereich Mathematik, Rheinland-Pfälzische Technische Universität Kaiserslautern-Landau, 67663 Kaiserslautern, Germany,\\
 \autlabel{10} Heidelberg University Biochemistry Center (BZH), Heidelberg, Germany,\\
 \autlabel{11} Forschungszentrum Jülich, Jülich, Germany,\\
 \autlabel{12} RWI - Leibniz Institute for Economic Research: Essen, Germany,\\
-\autlabel{13} Technische Universität Dortmund, Dortmund, Germany\\
-\autlabel{14} Technische Universität Braunschweig, Braunschweig, Germany\\
+\autlabel{13} TU Dortmund University, Dortmund, Germany,\\
+\autlabel{14} Institute of Space Systems (IRS), University of Stuttgart, Germany\\
+\autlabel{15} Materials Discovery and Interfaces (MDI), Ruhr University Bochum, Germany\\
+\autlabel{16} de-RSE e.V. --- Society for Research Software in Germany\\
+\autlabel{17} Technische Universität Braunschweig, Braunschweig, Germany\\
 }
 
 \abstract{% Abstract of the article
@@ -102,7 +112,7 @@ In the Research funding landscape of Germany, so-called collaborative Research C
 Digital tools have become so common in academic research that more and more processes in the research cycle require their use.
 It has become commonplace to pool certain tasks in dedicated units within the CRCs, the so-called INF projects.
 This report tries to catalogue the INF projects in Germany's research landscape.
-Building on that and on the workshop held at the de-RSE26 conference, we collect lessons learned across INF projects and distil the discussion into guides that other INF projects (or similar structures) can follow.
+Building on that and on the workshop held at the de-RSE26 conference, we collect lessons learnt across INF projects and distill the discussion into guides that other INF projects (or similar structures) can follow.
 }
 \keywords{INF, CRCs, DFG, Research Data Management, RDM, Research Software Engineering, RSE}
 
@@ -118,8 +128,8 @@ Building on that and on the workshop held at the de-RSE26 conference, we collect
 
 \usepackage[a-3u]{pdfx}
 \begin{filecontents}[overwrite]{\jobname.xmpdata}
-\Author{Hamza Oukili, Florian Goth, Bernd Flemisch et al.}
-\Title{INF Projects in Germany's CRCs --- an overview and lessons learned}
+\Author{Hamza Oukili, Florian Goth, Frank Löffler, Bernd Flemisch et al.}
+\Title{INF Projects in Germany's CRCs --- an overview and lessons learnt}
 \Language{English}
 \Subject{Software Science and Technology}
 \end{filecontents}
@@ -135,35 +145,35 @@ As digital tools have become central to the research process — from data colle
 These units provide research data management (RDM) and research software engineering (RSE) services to all projects within a CRC, while contending with the particular demands of interdisciplinary, long-running collaborations.
 Despite their growing numbers, INF projects are rarely documented as a collective: their structures, practical approaches, and accumulated experience tend to remain within individual CRCs.
 This report attempts to change that.
-We first catalogue current and past INF projects across Germany's research landscape, before drawing on a workshop held at de-RSE26 to collect lessons learned and distil them into practical guidance for INF projects and comparable structures.
+We first catalogue current and past INF projects across Germany's research landscape, before drawing on a workshop held at de-RSE26 to collect lessons learnt and distil them into practical guidance for INF projects and comparable structures.
 
 \section{History of the INF projects}
-The beginnings of specialised, shared positions within CRCs can be traced back to the foundation of the CRC 299, which was established in 1997 to survey the use of land under various characteristics. Being interdisciplinary and already aiming for the maximum runtime of 12 years, it was apparent from the beginning \cite{mueckschel2006} that a careful management of data has to happen in order to be useful for all associated disciplines.
+\label{sec:history}
+The beginnings of specialised, shared positions within CRCs can be traced back to the foundation of the CRC 299, which was established in 1997 to survey the use of land under various characteristics.
+Being interdisciplinary and already aiming for the maximum runtime of 12 years, it was apparent from the beginning \cite{mueckschel2006} that a careful management of data has to happen in order to be useful for all associated disciplines.
 Around the same time, various incidents of scientific misconduct prompted the German Research Foundation (GRF, DFG) to highlight in their
 memorandum on ``Safeguarding Good Scientific Practice'' \cite{DFG1998}
 the importance of research data as ``primary data''  and has put out the recommendation to take special care of those data at the host institution.
 Combining both requirements, more CRCs started to include personnel who handle data management.
-A first workshop \cite{SFB299-2004, SFB299-2005} on comparing lessons learned was organised by CRC 299 and CRC 552 in 2004 in Gießen.
-The respective follow-up workshop was organised again by CRC 299 and CRC 552 in 2007 \cite{SFB299-2007}.
-Around the same time, the process of having dedicated projects for the information infrastructure was formalised (based on the precursor work of CRC 299 and CRC 552)
+A first workshop \cite{SFB299-2004, SFB299-2005} on comparing lessons learnt was organised by CRC 299 and CRC 552 in 2004 in Gießen.
+The respective follow-up workshop was organised again by CRC~299 and CRC~552 in 2007 \cite{SFB299-2007}.
+Around the same time, the process of having dedicated projects for the information infrastructure was formalised (based on the precursor work of CRC~299 and CRC~552)
 and since 2007, INF projects can be applied for in CRCs at the GRF, with the first projects starting around 2009 \cite{Forschungsdateninfrastruktur2013}.
 Moving on, the regional focus shifts to Cologne.
-In 2009, a workshop was organised by TRR32 and CRC806
-bringing together almost 80 participants from a diverse set of disciplines, who published their experiences in a
+In 2009, a workshop was organised by TRR~32 and CRC~806 bringing together almost 80 participants from a diverse set of disciplines who published their experiences in a
 Post-Proceedings volume \cite{curdt787}.
-The next workshop was organised by the project ``Radieschen 
-(Rahmenbedingungen einer disziplinübergreifenden Forschungsdateninfrastruktur)''
-in Göttingen \cite{Forschungsdateninfrastruktur2013}. Among the participants, they observed
-that most INF projects were with central institutions like libraries and computing centres and maintained central
-research data management infrastructures for research collaboration. And, again, acceptance of the INF projects was brought up.\\
+The next workshop was organised by the project ``Radieschen (Rahmenbedingungen einer disziplinübergreifenden Forschungsdateninfrastruktur)''
+in Göttingen \cite{Forschungsdateninfrastruktur2013}.
+Among the participants they observed, that most INF projects were with central institutions like libraries and computing centres and maintained central
+RDM infrastructures for research collaboration. And, again, acceptance of the INF projects was brought up.\\
 Between 2013 and 2015, the number of funded INF projects increased, and hence the funding line became more established \cite{Engelhardt2013Forschungsdatenmanagement, bastian_2025}.
 
 Another follow-up workshop was held in Göttingen in 2018 \cite{Roertgen2019}.
 Around 2022, the DFG started to hand out guidelines for the INF projects \cite{bastian_2025}.
-Another workshop that should belong in this list was organised by the DINI/nestor AG Forschungsdaten in 2020\cite{Rizzolli_2021},
+Another workshop that should belong in this list was organised by the DINI/nestor AG Forschungsdaten in 2020 \cite{Rizzolli_2021},
 which discussed how much the tasks of an INF project align with the tasks of data stewards.
-Again in Cologne, another workshop was hosted \cite{bastian_2025}. A notable insight is that no participant has been to any
-of the previous workshops, and it was also noted that following the rules is still a better motivator for following data
+Again in Cologne, another workshop was hosted \cite{bastian_2025}. A notable insight is, that no participant has been to any
+of the previous workshops, and it was also noted, that following the rules is still a better motivator for following data
 management guidelines, rather than any intrinsic motivation from the scientists.
 In March 2026, we held a small workshop at de-RSE26. Notable here is that as many Research Software Engineers have been present
 as Research Data Managers.
@@ -181,36 +191,111 @@ These are topics that persist until today,
 and we will try to find out which answers the current generation of INF projects finds.
 
 \section{INF Projects in Germany}
+\label{sec:inf-in-germany}
 In this section, we describe the various INF projects in Germany, how they see themselves and which duties they perform.
-In this paper, we exclusively refer to these projects as INF projects, but within the respective CRCs, also other acronyms are used.
+In this manuscript, we exclusively refer to these projects as INF projects, but within the respective CRCs, also other acronyms are used.
 
-\subsection{Project Z03 --- Sustainable code development and optimization on modern supercomputing architectures, \href{https://gepris.dfg.de/gepris/projekt/258499086?language=en}{CRC1170 - Topological and Correlated Electronics at Surfaces and Interfaces, ``ToCoTronics''}, Universität Würzburg}
-Established in 2015 as a support unit for the theoretically working projects of the CRC, the focus was on numerical methods for Quantum Monte Carlo methods, functional renormalisation group techniques and non-equilibrium Green's function techniques. These methods are usually used on
-Germany's HPC systems. Therefore, the tight integration between software development, deep knowledge about the methods used in the CRCs science and knowledge about the targeted platforms became paramount to this INF project staffed by one person.
+\subsection{Project Z03 --- Sustainable code development and optimization on modern supercomputing architectures, \href{https://gepris.dfg.de/gepris/projekt/258499086?language=en}{CRC~1170 - Topological and Correlated Electronics at Surfaces and Interfaces, ``ToCoTronics''}, Universität Würzburg}
+Established in 2015 as a support unit for the theoretically working projects of the CRC the focus was on numerical methods for Quantum Monte Carlo methods, functional renormalisation group techniques and non-equilibrium Green's function techniques. These methods are usually used on
+Germany's HPC systems. Therefore the tight integration between software development, deep knowledge about the methods used in the CRCs science and a knowledge about the targeted platforms became paramount to this INF project staffed by one person.
 To facilitate the spread of knowledge, regular teaching opportunities were organised based on the materials of \href{https://carpentries.org/}{the Carpentries} in collaboration with the local biology department.
-From the very beginning, also the maintenance of the local IT infrastructure of the physics department was part of the project, which included
+From the very beginning, also the maintenance of the local IT infrastructure of the physics department was part of the project which included
 storage systems, desktops, as well as an HPC system.
 This integration of maintaining the IT infrastructure while at the same time focusing on sustainable development
 facilitated the roll-out of a local gitlab instance for the entire department which has grown by 2026 to $\approx 1000$ users from all
 over the world. Networking opportunities were used by participating in the RSE movement, which included the formation of the \href{https://de-rse.org/de/index.html}{de-RSE} society in 2018.
-This broad network enabled the project to write the data management strategy of the \href{https://www.ctdqmat.de/}{EXC2147}, which was successfully reviewed in 2019. This  strategy was aligned with the FAIR(Findable, Accessible, Interoperability, and Reuse of data) principles \cite{WilkinsonDumontier2016}.
-The continued usefulness of this project was acknowledged by the DFG since a second funding round of the CRC1170 was granted also in 2019.
-2020 was used for the formation of a local chapter ``Wü-RSE'' to provide a place
+This broad network enabled the project to write the data management strategy of the \href{https://www.ctdqmat.de/}{EXC~2147} which was successfully reviewed in 2019. This  strategy was aligned with the FAIR(Findable, Accesible, Interoperability, and Reuse of data) principles \cite{WilkinsonDumontier2016}.
+The continued usefulness of this project was acknowledged by the DFG since a second funding round of the CRC~1170 was granted also in 2019.
+2020 was used for the formation of a local chapter \href{https://de-rse.org/chapter/wue/}{``Wü-RSE''} to provide a place
 locally for like-minded people. The project was extended in 2023 for the last funding period. A highlight for this project's visibility included the hosting of de-RSE24, bringing the community of RSEs to Würzburg. Embedded into the community of RSEs, this project contributed
 to numerous position papers\cite{Anzt:2020,Goth:2025,gi2025,Kempf2026} over the years.\\
-This project spans the breadth of digital tools in science from a single machine up to HPC clusters, from data generation, over data analysis up to data storage, collaborating with single scientists as well as larger research groups. This required a flexibility in the tooling, which obviously used git, but led to the use of C++, Python, Mathematica, Fortran, and Julia for programming.
-The CRC1170 and EXC2147 are supporters of the \href{https://www.fairmat-nfdi.eu/fairmat/}{FAIRmat} NFDI consortium, so the \href{https://nomad-lab.eu/nomad-lab/nomad.html}{NOMAD} oasis is being rolled out to
+This project spans the breadth of digital tools in science from a single machine up to HPC clusters, from data generation, over data analysis up to data storage, collaborating with single scientists as well as larger research groups.
+This required a flexibility in the tooling, which obviously used git, but led to the use of C++, Python, Mathematica, Fortran, and Julia for programming.
+The CRC~1170 and EXC~2147 are supporters of the \href{https://www.fairmat-nfdi.eu/fairmat/}{FAIRmat} NFDI consortium, so the \href{https://nomad-lab.eu/nomad-lab/nomad.html}{NOMAD} oasis is being rolled out to
 the users in the department.
 
-\subsection{Project INF --- Scientific services and data management - \href{https://gepris.dfg.de/gepris/projekt/537324246?language=en}{CRC 1629 Negation in Language and Beyond} - Frankfurt am Main, Tübingen, Göttingen}
-CRC~1629 \emph{Negation in Language and Beyond} (NegLaB) is a Collaborative Research Center that investigates negation as a linguistic and cognitive phenomenon from different empirical and theoretical perspectives. Its projects span a wide range of disciplines, including theoretical linguistics, corpus-based research, and experimental work. As a result, CRC~1629 generates very different kinds of data through diverse methodologies and workflows. Within this setting, our project plays a central role by providing research data management, consulting, and teaching. This is particularly important in a humanities CRC, where researchers often work with sensitive data and are usually not formally trained in areas such as data management, data analysis, statistics, or experimental design.
+\subsection{Project INF --- Research Data Management and Research Software Engineering, \href{https://gepris.dfg.de/gepris/projekt/327154368}{CRC~1313 - Interface-Driven Multi-Field Processes in Porous Media – Flow, Transport and Deformation}, University of Stuttgart}
+CRC 1313 was established in 2018 to study interface-driven processes in porous media.
+To manage the data and code generated by these studies, a task force named "Software and Data" was formed to develop a long-term strategy.
+This work led to the creation of the INF project, which began in 2022 during the second funding phase.
+The project focuses on RDM and RSE to ensure that data and software outputs follow the FAIR principles.
+By reviewing datasets and providing support for software development, the project helps researchers produce high-quality, reusable, and well-tested code.
+These efforts are supported by training programs and outreach activities.
+The project is well-integrated into both national and local networks, including NFDI4Ing, de-RSE, and Data Stewardship goes Germany.
+At the local level, INF has built strong connections with the \href{https://www.simtech.uni-stuttgart.de/communication/events/workshops/sigdius-seminars/}{SIGDIUS} network and the central IT service facility of the University of Stuttgart. While some practices were adopted quickly, such as using quality badges and publishing datasets in the DaRUS repository, others proved more difficult.
+For example, implementing ELNs (\eg~\href{https://www.elabftw.net/}{eLabFTW}) has been challenging because it requires a significant change in daily research habits.
+A major lesson learnt is that technical infrastructure is not just about tools, but also about people. To convince researchers to adopt new practices while facing tight deadlines, the project must demonstrate clear, short-term benefits.
+Ultimately, success depends on effective communication and building collaborations that show how better data and software management improves research efficiency.
 
+\subsection{Project INF --- Collaborative and Sustainable Research Data Management, Analysis and Visualisation, CRC~1340 -- Matrix in Vision, Berlin} \label{sec:sfb1340}
+The INF project of CRC 1340 “Matrix in Vision” originated in medical informatics and radiology at Charité – Universitätsmedizin Berlin and the Berlin Institute of Health (BIH).
+It was conceived as a central service project for a data-intensive CRC aiming to understand how pathological changes in the extracellular matrix can be visualised in vivo, particularly in inflammatory disease settings, by combining biophysical and molecular imaging approaches.
+Within this context, the INF project provided a shared digital backbone for collaboration, data integration, RDM, secure data exchange, and reusable analysis workflows, especially for multimodal imaging, experimental data, and clinical data.
+In practice, the project focused mainly on RDM, complemented by infrastructure and support tasks.
+A central outcome was the self-hosted Matrix-COOP platform at Charité, based on Nextcloud, with about 100 TB managed storage and more than 100 active users.
+It served as a shared space for secure data exchange, templates, reporting, onboarding information, and a CRC-wide knowledge base.
+The project also supported data management plans, data protection and governance coordination, and access to centralised data storage, archiving and HPC resources.
+A particularly visible example was the integration of about 2,600 electronic health records with myocardial MRI data into a dedicated data warehouse with self-service query functionality and integrated data provenance tracking~\cite{johns_prov_tracking_2025}.
+Another important line of work concerned the secure exchange of imaging data and the setup of interfaces and transfer workflows for large multimodal datasets across the CRC. The project was closely connected to local and national research data infrastructures, especially NFDI4Health \cite{fluck_bausteine_2021} and the Medical Informatics Initiative \cite{prasser_difuture_2018}.
+Locally, it strengthened connections between medical informatics, radiology, the IT department, and CRC subprojects by embedding service development directly into day-to-day research workflows. A key lesson was that a single unified RDM platform for all groups was not realistic because requirements, data types, and established practices differed too much between projects.
+Also, according processes were already established in the first funding phase, in which no INF project was included.
+The project, therefore, shifted from a one-size-fits-all model to a hybrid, federated approach combining shared infrastructure with project-specific support.
+Easier to adopt were pragmatic services with immediate benefit, especially the cooperation platform, shared documentation, and targeted support for concrete integration needs.
+Overall, the project showed that sustainable INF work in a CRC requires both technical infrastructure and continuous hands-on support close to the researchers.
+Its usefulness was reflected in the successful evaluation of the CRC for a third funding period, with relevant parts of INF being carried forward as part of a new subproject.
+
+\subsection{Project INF - Sustainable Research Data Management, \href{https://gepris.dfg.de/gepris/projekt/417590517?language=en}{CRC~1415 -  Chemistry of Synthetic Two-Dimensional Materials}, Technische Universität Dresden}
+\label{subsec:crc1415}
+The CRC~1415 "Chemistry of Synthetic Two-Dimensional Materials" established 2020 at TU Dresden operates at the intersection of chemistry, materials science, and physics
+ aiming for controlled "bottom-up" synthesis and development of novel synthetic two-dimensional materials with high structural definition at the atomic or molecular level.
+Since 2024, in the start of the second funding period, the INF project accompanied the central project to develop and implement sustainable RDM
+infrastructure to support reproducibility and collaboration across 25 scientific projects and multiple partner institutions (Leibniz/Helmholtz) fostering harmonised data management strategies.
+The primary focus has been on RDM—installing and maintaining scalable infrastructure
+(\eg, local \href{https://nomad-lab.eu/nomad-lab/nomad-oasis.html}{NOMAD Oasis} of \href{https://www.fairmat-nfdi.eu/fairmat/}{FAIRmats} \href{https://nomad-lab.eu/nomad-lab/nomad.html}{NOMAD} platform),
+integrating Electronic Lab Notebooks(ELNs) (\eg, \href{https://www.elabftw.net/}{eLabFTW}),
+and providing regular training workshops for doctoral researchers and project leaders on FAIR data principles and infrastructure use.
+Research Software Engineering (RSE) tasks, such as developing data pipelines, writing file parsers for proprietary formats as well as automatic data processing, complement these efforts.
+The CRC\,1415 and the INF project are actively embedded in national and international networks,
+including the National Research Data Infrastructure (NFDI, particularly FAIRmat and NFDI4Chem), DINI, nestor, and the RDA Germany,
+which collectively facilitate knowledge exchange and the adoption of RDM best practices.
+Locally, the INF project has strong institutional connections with TU Dresden’s CIDS ZIH (Center for Information Services and High Performance Computing)
+and Service Center Research Data, and the Saxon State and University Library Dresden (SLUB)
+combining technical, infrastructural, and domain-specific knowledge.
+A significant challenge has been the consistent implementation of FAIR data principles and harmonised metadata standards across the CRC’s heterogeneous experimental and theoretical projects,
+as well as the unified rollout of the ELN eLabFTW and local data sharing platform NOMAD Oasis, due to diverse workflows and technical requirements.
+In contrast, open-access paper publishing has been widely implemented and open-access data publishing via \href{https://zenodo.org/communities/crc1415/about}{Zenodo}, \href{https://opara.zih.tu-dresden.de/home}{OPARA}, and \href{https://rodare.hzdr.de/communities/crc1415}{RODARE} grows in adoption,
+directly supporting the scientific outreach.
+The experience in CRC~1415 underscores that technical infrastructure alone is insufficient; sustained training, community engagement, and the early embedding of RDM and RSE expertise within the CRC’s data life cycle are essential for the successful and sustainable adoption of open science practices and FAIR research activities.
+
+\subsection{Project INF - Data Management for Reproducible Data-Driven Computational Modeling Cross-Species and Cross-Labs, \href{https://gepris.dfg.de/gepris/projekt/458705875?language=en}{CRC~1451 - Key Mechanisms of Motor Control in Health and Disease}, University of Cologne, European Neuroscience Institute Göttingen, Goethe University Frankfurt, Hebrew University of Jerusalem, University of Münster, German Center for Neurodegenerative Diseases, Forschungszentrum Jülich, Max Planck Institute for Biology of Ageing, Max Planck Institute for Metabolism Research}
+This INF project operates at the interface of computational neuroscience, data management, and scientific computing, supporting the overarching goal of CRC~1451 to understand motor control across biological scales and species.
+The INF project provides expertise, tools, services, and training for reproducibly accessing, describing, and modelling data generated across all projects, including the central service projects Z02 and Z03.
+A key task is the continuous assessment of workflows, resource requirements, and data analysis practices to identify differences that may affect data comparability and reusability.
+The INF project is embedded in a broad network within the CRC~1451, working closely with experimental and computational projects across all domains and acting as a central hub for data handling and exchange.
+\href{https://www.datalad.org/)}{DataLad} is the main RDM solution adopted by the CRC to address the challenge of introducing structure and version control to, ensuring reproducibility of, and supporting collaboration on heterogeneous data and workflows across projects with very different experimental setups and analysis methods.
+
+\subsection{Project INF - FAIR collection, curation and management of multidimensional research data, CRC 1625 – Atomic-scale understanding and design of multifunctional compositionally complex solid solution surfaces, Ruhr University Bochum}
+The CRC~1625 project started in 2024 and is dedicated to the investigation of compositionally complex solid solutions (CCSS) comprising five or more different elements mixed within a simple single-phase crystal structure.
+Its objective is the design of surface atom arrangements (SAA), which have the potential to overcome the limitations of conventional elemental or binary electrocatalysts, thereby paving the way toward sustainable materials with unprecedented activity and stability.
+As its RDMS platform, the INF project uses the MatInf system, extending it with project-specific data types and actively contributing to its further development together with the INF project of CRC/TRR 247 (for example, MatInf has recently been migrated to the ASP.NET Core 10 + SQL Server 2025 technology stack).
+The flexible methodology for the incremental evolution of RDM systems implemented in MatInf \cite{Dudarev2026} enables chemical entities to be treated as first-class data citizens while dynamically introducing new types of research data and deeply integrating them into the system.
+This includes API-based integration of external services for validation, extraction, and visualization of data originating from newly introduced research document types.
+A distinctive feature of CRC~1625 is that, alongside numerous projects dedicated to various aspects of CCSS/SAA research (including computational materials science), there is a group of projects directly dependent on the work of the INF project.
+In this context, INF acts as a direct data provider for projects A05 (Materials Informatics: Data-guided experimentation and machine learning) and A06 (Computer Science: Establishing a knowledge graph for the design of CCSS surfaces).
+All projects are provided with API-based access to the RDMS, including the possibility of executing arbitrary read queries through read-only database views.
+This ensures flexible data selection capabilities for analytical workflows in project A05 and extensive opportunities for project A06 to build a knowledge graph on top of the data contained within the RDMS \cite{Mohamed2026}.
+In addition to traditional workshops and hands-on sessions, the INF project, in collaboration with the Software Engineering Chair at Ruhr University Bochum, also offers a RDM course for students of the Computer Science faculty.
+Within this course, MatInf serves as one of the central use cases, and students gain not only practical experience working with the system through its REST APIs, but are also deeply involved in evaluating the compliance of such systems with the FAIR principles and discussing possible directions for their future development.
+
+\subsection{Project INF --- Scientific services and data management - \href{https://gepris.dfg.de/gepris/projekt/537324246?language=en}{CRC 1629 Negation in Language and Beyond} - Frankfurt am Main, Tübingen, Göttingen}
+CRC~1629 \emph{Negation in Language and Beyond} (NegLaB) is a Collaborative Research Center that investigates negation as a linguistic and cognitive phenomenon from different empirical and theoretical perspectives.
+Its projects span a wide range of disciplines, including theoretical linguistics, corpus-based research, and experimental work. As a result, CRC~1629 generates very different kinds of data through diverse methodologies and workflows. Within this setting, our project plays a central role by providing RDM, consulting, and teaching. This is particularly important in a humanities CRC, where researchers often work with sensitive data and are usually not formally trained in areas such as data management, data analysis, statistics, or experimental design.
 Our project is interdisciplinary, bringing together the three principal investigators, Alexander Mehler (computer science),
 Manfred Sailer and Sol Lago (linguistics), as well as collaborators from both disciplines,
 including Nasimeh Bahmanian, Giuseppe Abrahami, Andy Lücking, Leon Hammerla, and Mercedes Martinez Bruera.
 This interdisciplinarity is both the project’s major strength and one of its main challenges.
 The challenge is further amplified by the fact that NegLaB’s scientific questions explicitly depend on cross-linguistic and cross-method integration.
-As a result, infrastructure decisions affect not only individual projects but also how easily results can be compared and integrated across the CRC.
+As a result, infrastructure decisions affect not only individual projects, but also how easily results can be compared and integrated across the CRC.
 One important contribution has been the setup of a server that allows CRC members to implement,
 share, and run experiments online using open-source software like PCIbex\cite{zehr_schwarz_2018_pcibex}.
 Additionally, we developed a platform for collecting metadata for each project’s data.
@@ -224,62 +309,27 @@ Beyond our host institution, we are in contact with \href{https://www.uni-marbur
 which is a Hessen-wide network that offers courses and resources regarding data management, as well as with other linguistics CRCs.
 
 Our main takeaway is how important an INF project is in a humanities CRC: it helps ensure that sensitive and valuable data are handled appropriately, while at the same time giving researchers access to forms of training they would otherwise rarely receive.
-We have also learned how productive collaboration between computer scientists and linguists can be, as linguists provide fine-grained and theoretically grounded insights into language, while computer scientists contribute more efficient implementations and novel methodological approaches for research.
+We have also learnt how productive collaboration between computer scientists and linguists can be, as linguists provide fine-grained and theoretically grounded insights into language, while computer scientists contribute more efficient implementations and novel methodological approaches for research.
 
+\subsection{Project INF --- Information Infrastructure, \href{https://www.sfb1638.de/}{CRC~1638 --- Cellular Membrane Remodelling -- How Changing Form Creates Function}, Heidelberg, Mannheim}
+CRC~1638 investigates cellular membrane remodelling across five institutions, with projects generating data spanning imaging, structural biology, lipidomics, proteomics, and simulations.
+As in much of experimental biology, RDM awareness among researchers varies widely and formal training in RDM was rarely part of academic curricula when most current researchers were trained.
+The INF project addresses this --- sensitising researchers to the importance of good RDM and helping them get started in a way that leads to meaningful and lasting change in daily practice.
+A network of data stewards embedded within CRC groups forms the backbone of this approach, supported by INF seminars and one-to-one meetings with groups as needed.
+The seminars tackle topics that often feel overwhelming --- data organisation, persistent identifiers, data management plans --- and break them down into steps that stewards can act on easily within their groups.
+The aim is to show researchers why better RDM is worth doing, not to create bureaucratic overhead.
+The main technical focus has been the ELN \href{https://www.elabftw.net/}{eLabFTW}.
+Support goes beyond introducing the tool: a starter pack of templates covering common lab resources such as plasmids, antibodies, and cell lines provides groups with a ready-made structure including metadata fields with controlled vocabularies and linking logic between entries, making good documentation the path of least resistance rather than an added burden.
+A practical barrier for groups with existing reagent databases was migration: the INF team developed \href{https://github.com/sfb1638/elAPI\_Plugins}{\textit{elAPI Plugins}}, which uses \href{https://github.com/uhd-urz/elAPI}{\textit{elAPI}} from the Heidelberg University Computing Center (URZ) to batch-generate ELN entries from pre-defined templates, making the migration a one-time task.
+Within one year, active eLabFTW use in the CRC grew significantly in both the number of groups and the extent of use, with immediate perceived benefit to users.
+The project collaborates with the Heidelberg URZ and Research Data Unit (RDU) to build a broader university-wide eLabFTW user community, and has given presentations on ELN adoption and eLabFTW features to groups at Heidelberg and other universities.
+The project also participates in national and international ELN networks to exchange experience.
+RDM adoption follows from convincing researchers, not mandating them --- groups engage when the benefit to their own work is concrete and immediate.
+Having a research background can be an asset here, helping to frame RDM in terms of workflows researchers recognise, though good RDM support takes many forms.
+Investing in networks --- local data stewards, a university-wide ELN community, international practitioner groups --- substantially extends what a small project team can achieve.
+Finally, this publication itself points to a broader opportunity: INF projects across CRCs have much to learn from one another, and a more structured exchange between them would benefit the whole community.
 
-\subsection{Project INF - Sustainable Research Data Management, \href{https://gepris.dfg.de/gepris/projekt/417590517?language=en}{CRC1415 -  Chemistry of Synthetic Two-Dimensional Materials}, Technische Universität Dresden}
-The CRC\,1415 "Chemistry of Synthetic Two-Dimensional Materials" established 2020 at TU Dresden operates at the intersection of chemistry, materials science, and physics
- aiming for controlled "bottom-up" synthesis and development of novel synthetic two-dimensional materials with high structural definition at the atomic or molecular level.
-Since 2024, at the start of the 2nd funding period, the INF project accompanied the central project to develop and implement sustainable research data management (RDM)
-infrastructure to support reproducibility and collaboration across 25 scientific projects and multiple partner institutions (Leibniz/Helmholtz), fostering harmonised data management strategies.
-The primary focus has been on RDM—installing and maintaining scalable infrastructure
-(\eg, local \href{https://nomad-lab.eu/nomad-lab/nomad-oasis.html}{NOMAD Oasis} of \href{https://www.fairmat-nfdi.eu/fairmat/}{FAIRmats} \href{https://nomad-lab.eu/nomad-lab/nomad.html}{NOMAD} platform),
-integrating electronic lab notebooks (\eg, \href{https://www.elabftw.net/}{eLabFTW}),
-and providing regular training workshops for doctoral researchers and project leaders on FAIR data principles and infrastructure use.
-Research Software Engineering (RSE) tasks, such as developing data pipelines, writing file parsers for proprietary formats as well as automatic data processing, complement these efforts.
-The CRC\,1415 and the INF project are actively embedded in national and international networks,
-including the National Research Data Infrastructure (NFDI, particularly FAIRmat and NFDI4Chem), DINI, nestor, and the RDA Germany,
-which collectively facilitate knowledge exchange and the adoption of RDM best practices.
-Locally, the INF project has strong institutional connections with TU Dresden’s CIDS ZIH (Center for Information Services and High Performance Computing)
-and Service Center Research Data, and the Saxon State and University Library Dresden (SLUB)
-combining technical, infrastructural, and domain-specific knowledge.
-A significant challenge has been the consistent implementation of FAIR data principles and harmonised metadata standards across the CRC’s heterogeneous experimental and theoretical projects,
-as well as the unified rollout of the electronic lab notebooks eLabFTW and local data sharing platform NOMAD Oasis, due to diverse workflows and technical requirements. 
-In contrast, open-access paper publishing has been widely implemented and open-access data publishing via \href{https://zenodo.org/communities/crc1415/about}{Zenodo}, \href{https://opara.zih.tu-dresden.de/home}{OPARA}, and \href{https://rodare.hzdr.de/communities/crc1415}{RODARE} grows in adoption,
-directly supporting the scientific outreach.
-The experience in CRC\,1415 underscores that technical infrastructure alone is insufficient; sustained training, community engagement, and the early embedding of RDM and RSE expertise within the CRC’s data lifecycle are essential for the successful and sustainable adoption of open science practices and FAIR research activities.
-
-\subsection{Project INF --- Collaborative and Sustainable Research Data Management, Analysis and Visualisation, CRC1340 -- Matrix in Vision, Berlin} \label{sec:sfb1340}
-The INF project of CRC 1340 “Matrix in Vision” originated in medical informatics and radiology at Charité – Universitätsmedizin Berlin and the Berlin Institute of Health (BIH).
-It was conceived as a central service project for a data-intensive CRC aiming to understand how pathological changes in the extracellular matrix can be visualised in vivo, particularly in inflammatory disease settings, by combining biophysical and molecular imaging approaches.
-Within this context, the INF project provided a shared digital backbone for collaboration, data integration, research data management (RDM), secure data exchange, and reusable analysis workflows, especially for multimodal imaging, experimental data, and clinical data. In practice, the project focused mainly on RDM, complemented by infrastructure and support tasks. A central outcome was the self-hosted Matrix-COOP platform at Charité, based on Nextcloud, with about 100 TB managed storage and more than 100 active users. It served as a shared space for secure data exchange, templates, reporting, onboarding information, and a CRC-wide knowledge base. The project also supported data management plans, data protection and governance coordination, and access to centralised data storage, archiving and HPC resources. A particularly visible example was the integration of about 2,600 electronic health records with myocardial MRI data into a dedicated data warehouse with self-service query functionality and integrated data provenance tracking \cite{johns_prov_tracking_2025}.
-Another important line of work concerned the secure exchange of imaging data and the setup of interfaces and transfer workflows for large multimodal datasets across the CRC. The project was closely connected to local and national research data infrastructures, especially NFDI4Health \cite{fluck_bausteine_2021} and the Medical Informatics Initiative \cite{prasser_difuture_2018}.
-Locally, it strengthened connections between medical informatics, radiology, the IT department, and CRC subprojects by embedding service development directly into day-to-day research workflows. A key lesson was that a single unified RDM platform for all groups was not realistic because requirements, data types, and established practices differed too much between projects. Also, processes were already established in the first funding phase, in which no INF project was included. The project, therefore, shifted from a one-size-fits-all model to a hybrid, federated approach combining shared infrastructure with project-specific support. Easier to adopt were pragmatic services with immediate benefit, especially the cooperation platform, shared documentation, and targeted support for concrete integration needs.
-Overall, the project showed that sustainable INF work in a CRC requires both technical infrastructure and continuous hands-on support close to the researchers.
-Its usefulness was reflected in the successful evaluation of the CRC for a third funding period, with relevant parts of INF being carried forward as part of a new subproject.
-
-\subsection{Project INF --- Research data management and collaboration platform, TRR418 -- Foundations of Circadian Medicine, Berlin/Lübeck/Munich}
-The INF project of TRR 418 “Foundations of Circadian Medicine” combines expertise in medical informatics, health data privacy, and bioinformatics at Charité – Universitätsmedizin Berlin and the Berlin Institute of Health (BIH).
-It supports a transregional consortium investigating how circadian clocks shape physiology and disease and how this knowledge can be translated into medical research and practice. Because the TRR combines preclinical and clinical work across several sites, the INF project was conceived as an enabling structure for coordination, data stewardship, and cross-project reuse. Its main focus lies on a platform for broadly sharing circadian profiles and reproducible computational workflows, complemented by privacy-related guidance and training \cite{baum_data_circadian_2023}.
-A defining feature of the TRR is its reliance on longitudinal and rhythmic data, ranging from high-resolution sensor and wearable data to clinical, phenotypic, and omics datasets.
-The INF project, therefore, aims to create an environment in which such heterogeneous data can be documented, exchanged, processed, and explored in a consistent way. Planned components include a collaboration platform and services for FAIR data management with a particular emphasis on temporal data and tools for exploring circadian and omics data across projects.
-Analogously to the INF project of \hyperref[sec:sfb1340]{CRC 1340}, this project is embedded in institutional and national infrastructures. An expected challenge is the adoption of common data representations, ontologies and workflows across projects that differ widely in modality, temporal resolution, and regulatory context. Easier to adopt will likely be services with immediate practical benefit, such as shared collaboration spaces, and support for reproducible data and code handling.
-Since the project started only in October 2025, its contribution so far is mainly the coordinated establishment of shared structures; the central lesson at this stage is that, in a consortium centered on circadian and longitudinal data, INF work must integrate RDM, RSE, privacy, and domain-specific analytics from the outset rather than treating them as separate support functions.
-
-\subsection{Project INF --- Research Data Management and Research Software Engineering, \href{https://gepris.dfg.de/gepris/projekt/327154368}{CRC1313 - Interface-Driven Multi-Field Processes in Porous Media – Flow, Transport and Deformation}, University of Stuttgart}
-CRC 1313 was established in 2018 to study interface-driven processes in porous media.
-To manage the data and code generated by these studies, a task force named "Software and Data" was formed to develop a long-term strategy.
-This work led to the creation of the INF project, which began in 2022 during the second funding phase.
-The project focuses on RDM and RSE to ensure that data and software outputs follow the FAIR principles.
-By reviewing datasets and providing support for software development, the project helps researchers produce high-quality, reusable, and well-tested code.
-These efforts are supported by training programs and outreach activities.
-The project is well-integrated into both national and local networks, including NFDI4Ing, de-RSE, and Data Stewardship goes Germany.
-At the local level, INF has built strong connections with the \href{https://www.simtech.uni-stuttgart.de/communication/events/workshops/sigdius-seminars/}{SIGDIUS} network and the central IT service facility of the University of Stuttgart. While some practices were adopted quickly, such as using quality badges and publishing datasets in the DaRUS repository, others proved more difficult.
-For example, implementing ELNs (\eg~\href{https://www.elabftw.net/}{eLabFTW}) has been challenging because it requires a significant change in daily research habits.
-A major lesson learned is that technical infrastructure is not just about tools, but also about people. To convince researchers to adopt new practices while facing tight deadlines, the project must demonstrate clear, short-term benefits.
-Ultimately, success depends on effective communication and building collaborations that show how better data and software management improves research efficiency.
-
-\subsection{Project INF - User-oriented research infrastructure assisting linguistic data collection and (re-)use, \href{https://www.uni-bielefeld.de/sfb/sfb1646/}{CRC1646 -  Linguistic Creativity in Communication}, Universität Bielefeld}
+\subsection{Project INF - User-oriented research infrastructure assisting linguistic data collection and (re-)use, \href{https://www.uni-bielefeld.de/sfb/sfb1646/}{CRC~1646 -  Linguistic Creativity in Communication}, Universität Bielefeld}
 CRC 1646 was established in 2024 at Bielefeld University.
 The research is an interdisciplinary collaboration involving multiple fields, such as theoretical and experimental linguistics, computational linguistics, psycholinguistics, and others.
 It investigates the core properties of linguistic creativity, develops empirical measures, and analyses underlying linguistic, cognitive, and social mechanisms. The research is structured in three phases: the first formulates initial hypotheses, the second examines principles and their interactions in creative language use, and the third integrates the findings into a comprehensive theory of linguistic creativity.
@@ -294,82 +344,31 @@ Second, a data management platform that enables the integration and handling of 
 \textbf{I.} Our wizard \textit{RUDI} (Research-centred User-oriented Data Infrastructure) is being developed as a dynamic, modular system, grounded in a careful analysis of domain-specific requirements and designed for future adoption by other disciplines.
 The infrastructure is based on ontological data models, enabling different layers and components of the platform to automatically adapt to new values while maintaining consistency and integration.
 The considered model enhances the next phase by improving project collaboration efficiency and aligning with strategies that tailor data management to the specific needs of consented data \cite{Mohammadietal2026}. %, thereby facilitating effective collaboration and reducing the time required for data management tasks.
-\textbf{II.} Given the large volume and heterogeneity of data within the CRC, we provide a range of RDM-related workshops, including training on GitLab (the recommended repository at Bielefeld University), tidy data principles, and FAIR data practices. These activities are particularly aimed at preparing early-career researchers, such as PhD students, for data management responsibilities. In addition, we offer comprehensive \href{https://crc1646.pages.ub.uni-bielefeld.de/inf/website/wiki/site/index.html}{guidelines} and a \href{https://crc1646.pages.ub.uni-bielefeld.de/inf/website/faq.html}{FAQ section} on our website, enabling members to access relevant information as needed. In accordance with university policies, INF maintains close collaboration with \href{https://www.uni-bielefeld.de/ub/digital/forschungsdaten/kompetenzzentrum/}{Competence Center of Research Data} and \href{https://www.uni-bielefeld.de/einrichtungen/bits/ueber-uns/index.xml}{Bielefeld IT service (BITS)}. 
+\textbf{II.} Given the large volume and heterogeneity of data within the CRC, we provide a range of RDM-related workshops, including training on GitLab (the recommended repository at Bielefeld University), tidy data principles, and FAIR data practices. These activities are particularly aimed at preparing early-career researchers, such as PhD students, for data management responsibilities. In addition, we offer comprehensive \href{https://crc1646.pages.ub.uni-bielefeld.de/inf/website/wiki/site/index.html}{guidelines} and a \href{https://crc1646.pages.ub.uni-bielefeld.de/inf/website/faq.html}{FAQ section} on our website, enabling members to access relevant information as needed. In accordance with university policies, INF maintains close collaboration with \href{https://www.uni-bielefeld.de/ub/digital/forschungsdaten/kompetenzzentrum/}{Competence Center of Research Data} and \href{https://www.uni-bielefeld.de/einrichtungen/bits/ueber-uns/index.xml}{Bielefeld IT service (BITS)}.
 \textbf{III.} Finally, INF provides training in statistical methodologies through workshops and hands-on sessions. We also offer workshops and consultations on programming and annotation tools to support researchers in their technical work. In addition, our legal colleagues in INF offer guidance on the legal aspects of consent forms, highlighting key requirements and best practices through dedicated workshops and consultation sessions.
 
-\subsection{Project INF - Infrastructure, TRR265 - Loss and regaining control in addictions, TUD Dresden University of Technology}
+\subsection{Project INF -- Research Data Management and Research Software Engineering, CRC 1667 ATLAS -- Advancing Technologies of Very Low-Altitude Satellites, Stuttgart}
+The interdisciplinary research of the CRC 1667 ATLAS spans the fields of engineering, chemistry, and physics, and addresses fundamental scientific and engineering challenges associated with accessing and operating in Very Low Earth Orbit (VLEO).
+Within this context, the INF project aims to establish an integrated information infrastructure for research data and software that adheres to the FAIR guiding principles.
 
-The INF project provides a comprehensive IT infrastructure tailored to the needs of the researchers working in the domain of addiction research (primarily alcohol and tobacco) within clinical psychology.
-It builds on and extends the infrastructure created for the prior CRC940 ``Volition and Cognitive Control'' as well as for the CRC205 ``The Adrenal: Central Relay in Health And Disease''.
-The goal of INF is to establish a unified system supporting every step of the clinical research.
-This begins with the recruitment of participants, their screening and pseudonymization, the management of the studies, the conduction of digital behavioural tests, as well as the processing and long-term archival of fMRI data.
+The activities of the INF project primarily concentrate on RDM and teaching.
+Core tasks include the provision of infrastructure for sharing, archiving and publishing research data and research software, making results reproducible, as well as the automation of these data handling processes.
+In addition, the project contributes through training activities in the areas of data management and software engineering practices to support researchers in implementing sustainable research workflows throughout the CRC.
 
-The project fostered the synergy between the Center for Information Services \& High Performance Computing (ZIH) of the TU Dresden, Dresden's University Clinic and the Faculty of Psychology, especially its Neuroimaging Center (NIC).
-It also demonstrated the need for a clear documentation and communication of the agreed procedures and the importance of strong quality assurance procedures at every step of the workflows involving human interaction.
+The project is connected to national RDM initiatives through participation of Bernd Flemisch in the NFDI consortium NFDI4Ing (DFG project number \geprislink{442146713}).
+At the local institutional level, collaborations and exchanges were established with other large-scale research initiatives, including CRC 1313 (DFG \geprislink{327154368}) and EXC 2075 (DFG \geprislink{390740016}).
 
-\subsection{Project INF --- Information Infrastructure, \href{https://www.sfb1638.de/}{CRC1638 --- Cellular Membrane Remodelling -- How Changing Form Creates Function}, Heidelberg, Mannheim}
-CRC~1638 investigates cellular membrane remodelling across five institutions, with projects generating data spanning imaging, structural biology, lipidomics, proteomics, and simulations.
-As in much of experimental biology, RDM awareness among researchers varies widely and formal training in RDM was rarely part of academic curricula when most current researchers were trained.
-The INF project addresses this --- sensitising researchers to the importance of good RDM and helping them get started in a way that leads to meaningful and lasting change in daily practice.
-A network of data stewards embedded within CRC groups forms the backbone of this approach, supported by INF seminars and one-to-one meetings with groups as needed.
-The seminars tackle topics that often feel overwhelming --- data organisation, persistent identifiers, data management plans --- and break them down into steps that stewards can act on easily within their groups.
-The aim is to show researchers why better RDM is worth doing, not to create bureaucratic overhead.
-The main technical focus has been the electronic lab notebook (ELN) \href{https://www.elabftw.net/}{eLabFTW}.
-Support goes beyond introducing the tool: a starter pack of templates covering common lab resources such as plasmids, antibodies, and cell lines provides groups with a ready-made structure including metadata fields with controlled vocabularies and linking logic between entries, making good documentation the path of least resistance rather than an added burden.
-A practical barrier for groups with existing reagent databases was migration: the INF team developed \href{https://github.com/sfb1638/elAPI\_Plugins}{\textit{elAPI Plugins}}, which uses \href{https://github.com/uhd-urz/elAPI}{\textit{elAPI}} from the Heidelberg University Computing Center (URZ) to batch-generate ELN entries from pre-defined templates, making the migration a one-time task.
-Within one year, active eLabFTW use in the CRC grew significantly in both the number of groups and the extent of use, with immediate perceived benefit to users.
-The project collaborates with the Heidelberg URZ and Research Data Unit (RDU) to build a broader university-wide eLabFTW user community, and has given presentations on ELN adoption and eLabFTW features to groups at Heidelberg and other universities.
-The project also participates in national and international ELN networks to exchange experience.
-RDM adoption follows from convincing researchers, not mandating them --- groups engage when the benefit to their own work is concrete and immediate.
-Having a research background can be an asset here, helping to frame RDM in terms of workflows researchers recognise, though good RDM support takes many forms.
-Investing in networks --- local data stewards, a university-wide ELN community, international practitioner groups --- substantially extends what a small project team can achieve.
-Finally, this publication itself points to a broader opportunity: INF projects across CRCs have much to learn from one another, and a more structured exchange between them would benefit the whole community.
+One major challenge identified during the project is the adoption of comprehensive research data publication practices.
+While the publication of scientific articles is well established, the publication of accompanying datasets remains difficult, primarily due to limited time resources of researchers.
+Although the INF project can provide guidance and technical support, the responsibility for preparing and publishing datasets remains with the researchers themselves.
+Also, interest remains low in adopting data storage with FAIR data principles, since most research groups already have functioning data storage techniques and do not see the necessity in switching.
+In contrast, central communication tools were well received although multi-platform use in different institutions hinders a streamlined flow of information.
+Furthermore, the introduction of ELNs was comparatively well received, \eg~due to the more automated documentation process of metadata and the simplicity in moving away from traditional paper-based documentation.
 
-\subsection{Project INF - Infrastructure, \href{https://trr391.tu-dortmund.de/}{TRR391 - Spatio-temporal Statistics for the Transition of Energy and Transport}
-, TU Dortund, RU Bochum}
-TRR 391 is an interdisciplinary collaborative research project dedicated to the analysis of
-spatio-temporal data for the energy and transport transition. It links methodological
-advances in statistics and econometrics with substantive applications in energy and transport
-research. By that, it brings together perspectives from mathematics, computer science,
-geoinformatics, logistics, electrical engineering, and energy economics. Reflecting this broad
-agenda, the TRR works with a wide variety of data, including simulations, experiments,
-surveys, geospatial and sensor-based information, administrative and process-generated
-records, open data sources, and data from collaborations with external partners.
-The INF project within TRR 391 contributes to the development of a coherent framework for
-research data and software management. The primary objective of INF is to establish support
-structures for the scientists at the TRR 391, supporting interdisciplinary collaboration and
-ensuring reproducibility across subprojects.
-Our activities span the full data lifecycle and are structured into five interconnected work
-packages.
-We conduct a systematic needs assessment and enhance the awareness of common data
-formats, metadata, and data management plans in alignment with FAIR principles, supported
-by tools such as RDMO. Based on this, we establish workflows for data curation, storage, and
-long-term accessibility, making use of repository solutions such as TUDOdata and Zenodo.
-In parallel, we promote reproducible software development by encouraging the use of
-version control systems (\eg, Git/GitHub), documentation standards, and structured
-development workflows. We also work on improving interoperability by developing shared
-interfaces and data exchange standards across projects.
-Finally, we contribute to dissemination and sustainability by sharing developed concepts and
-best practices within the consortium and beyond, and by linking our activities to broader
-initiatives such as the NFDI.
-
-\subsection{Project INF - Infrastructure, TRR393 - Trajectories of Affective Disorders: Cognitive-Emotional Mechanisms of Symptom Change, TUD Dresden University of Technology}
-
-TRR393 is a Collaborative Research Centre (TRR 393) focused on Affective Disorders (AD) — comprising major depressive disorder and bipolar disorder. Its goal is to identify trajectories of recurrences and remissions in AD, determine cognitive-emotional mechanisms and neurobiological correlates of acute symptom changes, and probe mechanism-based interventions.
-
-The INF project establishes a unified information infrastructure for the CRC/TRR 393, designed to support the research of individual projects, foster cross-project collaboration, and ensure adherence to FAIR data management principles.
-At its core, the project pursues three key objectives:
-(i) providing a professional system for research data capture, storage, access, and information management; 
-(ii) implementing comprehensive data quality control procedures; and 
-(iii) delivering training for standardised clinical assessments across all participating sites.
-The infrastructure encompasses a broad range of components that together form a cohesive research ecosystem.
-These include centralised study management in REDCap, GDPR-compliant handling and pseudonymization of personal data in Participant Management System (PAMS),
-centralised quality control and archiving of MRI data, seamless integration of the MRI devices at UMR and UMS into the archiving system, and the import of existing datasets from BipoLife and FOR 2107.
-Developed and operated in close cooperation with all CRC/TRR 393 researchers, the system evolves continuously to meet emerging project requirements — accommodating new data types along with their metadata — and is complemented by ongoing user support and training in the IT environment.
-Building on methods and tools successfully established in CRC 940 and CRC/TRR 265, the INF project further benefits from ZIH's commitment to sustainable long-term data archiving, ensuring that the scientific output of CRC/TRR 393 remains accessible, secure, and reusable for years to come.
+One of the central lessons learnt in the project is that successful RDM requires both sustainable infrastructure and active engagement.
+The FAIR principles, which are essential to ensure the long-term reusability of research data and software, can only be effectively implemented when researchers receive practical training and clear workflow recommendations.
 
 \subsection{\href{https://www.computeralgebra.de/sfb/}{TRR 195 - Symbolic Tools in Mathematics and their Application}, Kaiserslautern, Aachen, Saarbruecken, Berlin, Darmstadt, Siegen, Stuttgart, Tuebingen}
-
 Computing examples have always been a key component of mathematical research. Modern computers paired
 with sophisticated mathematical software tools have taken the possibilities of such calculations to
 a new level. In the realm of algebra and its applications, where exact calculations are inevitable,
@@ -387,14 +386,38 @@ most scientists working in this CRC contain some research software engineering, 
 cutting edge research software, managing releases, debugging, training, etc; or using the research
 software to compile vast data collections. The CRC produces both quality code, and data artefacts in
 the form of interesting mathematical objects. In collaboration with MaRDI, both these outputs strive
-to be as FAIR as possible. The data artifacs are stored both in Zenodo, and also in a new database
+to be as FAIR as possible. The data artefacts are stored both in Zenodo, and also in a new database
 service for FAIR mathematical objects being bootstrapped by the CRC, named simple, the OSCAR DB.\@
 Regular teaching sessions in the form of Summer/Winter schools are held, which introduces
 participants to both RSE principles (code writing practices, version control tooling, domain
 specific programming workflows), and combining theoretical mathematics with practical usage and
 extension of products within the OSCAR universe.
 
-\subsection{Project Q02 - Data Management and Training Platform for AMD Research, \href{https://gepris.dfg.de/gepris/projekt/512007073?language=en}{TRR379 - Neuropsychobiology of Aggression: A Transdiagnostic Approach in Mental Disorders}, RWTH Aachen University, Goethe University Frankfurt, Central Institute of Mental Health, Forschungszentrum Jülich, University Hospital Aachen}
+\subsection{Project INF - Research Data Management and AI-Driven Knowledge Discovery, TRR 247 – Heterogeneous Oxidation Catalysis in the Liquid Phase, Ruhr University Bochum, University of Duisburg-Essen}
+The goal of TRR~247, which started in mid-2018, is to enable the rational design of new, abundant, and superior catalysts based on mixed metal oxides for catalytic selective oxidation processes in the liquid phase.
+In doing so, TRR~247 aims to contribute to the efficient use of sustainable resources for the production of chemicals in a post-fossil era.
+It should be noted that the INF project was introduced into the TRR only from Funding Period 2, \ie, in the second half of 2022, which may be considered somewhat delayed given the challenges associated with handling heterogeneous data in modern materials science.
+It is commonly assumed that university structures provide reliable IT infrastructure for the needs of TRRs; however, our project experienced the opposite when, in autumn 2022, following a successful cyberattack on the IT infrastructure of the University of Duisburg-Essen, most systems – including the RDMS used within the TRR – became unavailable and, as it later turned out, irrecoverably lost.
+Nevertheless, considering the TRR’s demand for handling multimodal materials science data, a Minimum Viable Product (MVP) prototype of an extensible RDMS system (ASP.NET Core 7 + SQL Server 2022) was developed within a very short time.
+By March 2023, it had already been presented to the consortium and put into operation on dedicated hardware acquired through CRC/TRR~247 funding allocated to the INF project.
+A separate story concerns the recovery of research data from the first Funding Period using a damaged virtual machine backup that was provided almost a year after the incident.
+This involved numerous professional challenges, ranging from recovering the database from a non-functional PostgreSQL instance to reverse-engineering the database structure and migrating all data into the new extensible data model of the current RDMS MatInf.
+The main lesson learnt was that our data are ultimately our own responsibility – above all, the responsibility of the INF project – which consequently established a geographically distributed, disaster-resilient infrastructure providing uninterrupted service for the TRR, involving researchers from Bochum, Duisburg, Essen, Kiel, Mülheim an der Ruhr, and Kaiserslautern.
+In less than four years, the INF project has achieved several notable milestones: (i) we successfully recovered all data from the first Funding Period from near-total loss; (ii) the open-source RDMS MatInf, \href{https://eln-finder.ulb.tu-darmstadt.de/items/8aefad94-9f2d-4b40-b94f-21c9419eb3be}{registered in the ELN Finder}, continues to evolve and is being tightly integrated into researchers’ workflows \cite{Dudarev2025}; (iii) the main TRR repository has been \href{https://doi.org/10.17616/R31NJNUG}{registered in re3data.org} as the primary repository for CRC/TRR~247; (iv) successful integration with the NFDI Infrastructure Proxy service provided by IAM4NFDI (Base4NFDI) has been achieved, and collaborations with NFDI-MatWerk and FAIRmat are ongoing; and (v) regular workshops and hands-on sessions are conducted to train users, including long-term dataset publication with DOI assignment via Zenodo in support of scientific publications.
+Integration with \href{https://about.coscine.de/}{Coscine} / \href{https://about.coscine.de/news/post-30/}{DataStorage.nrw} for long-term data archiving is planned.
+In February 2026, TRR~247 successfully passed the DFG evaluation and will be extended into a third Funding Period, while the INF project itself received highly positive recognition and will continue its mission.
+
+\subsection{Project INF - Infrastructure, TRR~265 - Loss and regaining control in addictions, TUD Dresden University of Technology}
+\label{subsec:trr265}
+The INF project provides a comprehensive IT infrastructure tailored to the needs of the researchers working in the domain of addiction research (primarily alcohol and tobacco) within clinical psychology.
+It builds on and extends the infrastructure created for the prior CRC~940 ``Volition and Cognitive Control'' as well as for the CRC~205 ``The Adrenal: Central Relay in Health And Disease''.
+The goal of INF is to establish a unified system supporting every step of the clinical research.
+This begins with the recruitment of participants, their screening and pseudonymisation, the management of the studies, the conduction of digital behavioural tests, as well as the processing and long-term archival of fMRI data.
+
+The project fostered the synergy between the Center for Information Services \& High Performance Computing (ZIH) of the TU Dresden, Dresden's University Clinic and the Faculty of Psychology, especially its Neuroimaging Center (NIC).
+It also demonstrated the need for a clear documentation and communication of the agreed procedures and the importance of strong quality assurance procedures at every step of the workflows involving human interaction.
+
+\subsection{Project Q02 - Data Management and Training Platform for AMD Research, \href{https://gepris.dfg.de/gepris/projekt/512007073?language=en}{TRR~379 - Neuropsychobiology of Aggression: A Transdiagnostic Approach in Mental Disorders}, RWTH Aachen University, Goethe University Frankfurt, Central Institute of Mental Health, Forschungszentrum Jülich, University Hospital Aachen}
 
 This project develops a decentralised FAIR-compliant data platform to support integration, harmonisation, and analysis of longitudinal, transdiagnostic datasets across participating sites in the consortium.
 Within this framework, the Q02 INF project serves as the central data management and, through software engineering, enabling solutions for data-driven research on transdiagnostic biosignatures of aggressive behaviour.
@@ -404,40 +427,85 @@ and
 \href{https://www.datalad.org/)}{DataLad}
 for mobile data collection and distributed data management, respectively.
 In addition, the project supports the development of training materials and workflows for data handling, preprocessing, and analysis, thereby supporting early-career researchers within the consortium.
-As the technical and organisational backbone for data sharing and integration within the TRR379, the Q02 project fosters strong collaborations between domain scientists, data stewards, and infrastructure providers.
-Beyond the consortium, the project is connected to broader RSE and research data management initiatives.
+As the technical and organisational backbone for data sharing and integration within the TRR~379, the Q02 project fosters strong collaborations between domain scientists, data stewards, and infrastructure providers.
+Beyond the consortium, the project is connected to broader RSE and RDM initiatives.
 For example, its components are in production use within the
-\href{https://www.crc1451.uni-koeln.de/}{CRC1451}
+\href{https://www.crc1451.uni-koeln.de/}{CRC~1451}
 and
 \href{https://abcd-j.de/}{ABCD-J (Accessing Behavior for Clinical Data and Joint Usage)}
 networks.
-One particularly useful but challenging aspect has been the adoption of fully decentralized and secured data submission and management systems.
+One particularly useful but challenging aspect has been the adoption of fully decentralised and secured data submission and management systems.
 While this approach significantly enhances data integrity and compliance with data protection regulations, it requires careful coordination and onboarding of all participating partners.
 Tools such as standardised data workflows and a shared metadata system, including a web-based metadata editor, backend API, and dedicated metadata schema, have been more readily adopted and are now widely used across the consortium.
-A key lesson learned is that successful implementation of such infrastructures requires not only robust technical solutions, but also continuous training, close collaboration across consortium contributors, and strong community engagement to ensure long-term adoption and impact.
+A key lesson learnt is that successful implementation of such infrastructures requires not only robust technical solutions, but also continuous training, close collaboration across consortium contributors, and strong community engagement to ensure long-term adoption and impact.
 
-\subsection{Project INF - Data Management for Reproducible Data-Driven Computational Modeling Cross-Species and Cross-Labs, \href{https://gepris.dfg.de/gepris/projekt/458705875?language=en}{CRC1451 - Key Mechanisms of Motor Control in Health and Disease}, University of Cologne, European Neuroscience Institute Göttingen, Goethe University Frankfurt, Hebrew University of Jerusalem, University of Münster, German Center for Neurodegenerative Diseases, Forschungszentrum Jülich, Max Planck Institute for Biology of Ageing, Max Planck Institute for Metabolism Research}
+\subsection{Project INF - Infrastructure, \href{https://trr391.tu-dortmund.de/}{TRR~391 - Spatio-temporal Statistics for the Transition of Energy and Transport}
+, TU Dortmund university, RU Bochum}
+TRR~391 is an interdisciplinary collaborative research project dedicated to the analysis of
+spatio-temporal data for the energy and transport transition. It links methodological
+advances in statistics and econometrics with substantive applications in energy and transport
+research. By that, it brings together perspectives from mathematics, computer science,
+geoinformatics, logistics, electrical engineering, and energy economics. Reflecting this broad
+agenda, the TRR works with a wide variety of data, including simulations, experiments,
+surveys, geospatial and sensor-based information, administrative and process-generated
+records, open data sources, and data from collaborations with external partners.
+The INF project within TRR 391 contributes to the development of a coherent framework for
+research data and software management. The primary objective of INF is to establish support
+structures for the scientists at the TRR 391, supporting interdisciplinary collaboration and
+ensuring reproducibility across subprojects.
+Our activities span the full data life cycle and are structured into five interconnected work
+packages.
+We conduct a systematic needs assessment and enhance the awareness for common data
+formats, metadata, and data management plans in alignment with FAIR principles, supported
+by tools such as RDMO. Based on this, we establish workflows for data curation, storage, and
+long-term accessibility, making use of repository solutions such as TUDOdata and Zenodo.
+In parallel, we promote reproducible software development by encouraging the use of
+version control systems (\eg, Git/GitHub), documentation standards, and structured
+development workflows. We also work on improving interoperability by developing shared
+interfaces and data exchange standards across projects.
+Finally, we contribute to dissemination and sustainability by sharing developed concepts and
+best practices within the consortium and beyond, and by linking our activities to broader
+initiatives such as the NFDI.
 
-This INF project operates at the interface of computational neuroscience, data management, and scientific computing, supporting the overarching goal of CRC1451 to understand motor control across biological scales and species.
-The INF project provides expertise, tools, services, and training for reproducibly accessing, describing, and modelling data generated across all projects, including the central service projects Z02 and Z03.
-A key task is the continuous assessment of workflows, resource requirements, and data analysis practices to identify differences that may affect data comparability and reusability. 
-The INF project is embedded in a broad network within the CRC1451, working closely with experimental and computational projects across all domains and acting as a central hub for data handling and exchange.
-\href{https://www.datalad.org/)}{DataLad} is the main RDM solution adopted by the CRC to address the challenge of introducing structure and version control to, ensuring reproducibility of, and supporting collaboration on heterogeneous data and workflows across projects with very different experimental setups and analysis methods.
+\subsection{Project INF - Infrastructure, TRR~393 - Trajectories of Affective Disorders: Cognitive-Emotional Mechanisms of Symptom Change, TUD Dresden University of Technology}
+\label{subsec:trr393}
+TRR~393 is a Collaborative Research Centre (TRR~393) focused on Affective Disorders (AD) — comprising major depressive disorder and bipolar disorder. Its goal is to identify trajectories of recurrences and remissions in AD, determine cognitive-emotional mechanisms and neurobiological correlates of acute symptom changes, and probe mechanism-based interventions.
+The INF project establishes a unified information infrastructure for the TRR~393, designed to support the research of individual projects, foster cross-project collaboration, and ensure adherence to FAIR data management principles.
+At its core, the project pursues three key objectives:
+(i) providing a professional system for research data capture, storage, access, and information management; 
+(ii) implementing comprehensive data quality control procedures; and 
+(iii) delivering training for standardised clinical assessments across all participating sites.
+The infrastructure encompasses a broad range of components that together form a cohesive research ecosystem.
+These include centralised study management in REDCap, GDPR-compliant handling and pseudonymisation of personal data in Participant Management System (PAMS),
+centralised quality control and archiving of MRI data, seamless integration of the MRI devices at UMR and UMS into the archiving system, and the import of existing datasets from BipoLife and FOR 2107.
+Developed and operated in close cooperation with all TRR~393 researchers, the system evolves continuously to meet emerging project requirements — accommodating new data types along with their metadata — and is complemented by ongoing user support and training in the IT environment.
+Building on methods and tools successfully established in CRC~940 and TRR~265, the INF project further benefits from ZIH's commitment to sustainable long-term data archiving, ensuring that the scientific output of TRR~393 remains accessible, secure, and reusable for years to come.
 
+\subsection{Project INF - Information infrastructure project, TRR~408 - AgiMo: Data-driven agile planning for responsible mobility, TUD Dresden University of Technology}
+\label{subsec:trr408}
+AgiMo (TRR~408) is a CRC for the advancement of traffic, transportation and mobility planning.
+It aims to develop a set of consistent mobility and transportation planning methods, including behavioural data and models for all modes of mobility from walking to motorised vehicles, and integrating them into a Digital Twin that allows to involve different stakeholder preferences to create future scenarios for responsible mobility.
 
-\subsection{Project INF - Information infrastructure project, TRR408 - AgiMo: Data-driven agile planning for responsible mobility, TUD Dresden University of Technology}
-AgiMo (TRR 408) is a CRC for the advancement of traffic, transportation and mobility planning. It aims to develop a set of consistent mobility and transportation planning methods, including behavioural data and models for all modes of mobility from walking to motorised vehicles, and integrating them into a Digital Twin that allows to involve different stakeholder preferences to create future scenarios for responsible mobility.
+The goal of the INF project of TRR~408 is to provide a virtual research environment (VRE).
+The VRE acts as a centralised system that comprises different software components and services that foster RDM and collaboration, \eg, by providing data storage systems, workflow automation, as well as the integration of the digital twin to allow modelling of transportation and mobility systems, their parametrisation and subsequent simulation of city-wide traffic flow scenarios based on real-world data. To collect requirements for the VRE, the INF team together with the Service Center Research Data\footnote{\url{https://tu-dresden.de/forschung-transfer/services-fuer-forschende/kontaktstelle-forschungsdaten}} conducted interviews with all other AgiMo projects.
 
-The goal of the INF project of TRR 408 is to provide a virtual research environment (VRE). The VRE acts as a centralised system that comprises different software components and services that foster research data management and collaboration, e.\,g., by providing data storage systems, workflow automation, as well as the integration of the digital twin to allow modelling of transportation and mobility systems, their parametrisation and subsequent simulation of city-wide traffic flow scenarios based on real-world data. To collect requirements for the VRE, the INF team together with the Service Center Research Data\footnote{\url{https://tu-dresden.de/forschung-transfer/services-fuer-forschende/kontaktstelle-forschungsdaten}} conducted interviews with all other AgiMo projects.
+\subsection{Project INF --- Research data management and collaboration platform, TRR~418 -- Foundations of Circadian Medicine, Berlin/Lübeck/Munich}
+The INF project of TRR 418 “Foundations of Circadian Medicine” combines expertise in medical informatics, health data privacy, and bioinformatics at Charité – Universitätsmedizin Berlin and the Berlin Institute of Health (BIH).
+It supports a transregional consortium investigating how circadian clocks shape physiology and disease and how this knowledge can be translated into medical research and practice. Because the TRR combines preclinical and clinical work across several sites, the INF project was conceived as an enabling structure for coordination, data stewardship, and cross-project reuse. Its main focus lies on a platform for broadly sharing circadian profiles and reproducible computational workflows, complemented by privacy-related guidance and training \cite{baum_data_circadian_2023}.
+A defining feature of the TRR is its reliance on longitudinal and rhythmic data, ranging from high-resolution sensor and wearable data to clinical, phenotypic, and omics datasets.
+The INF project, therefore, aims to create an environment in which such heterogeneous data can be documented, exchanged, processed, and explored in a consistent way. Planned components include a collaboration platform and services for FAIR data management with a particular emphasis on temporal data and tools for exploring circadian and omics data across projects.
+Analogously to the INF project of \hyperref[sec:sfb1340]{CRC 1340}, this project is embedded in institutional and national infrastructures. An expected challenge is the adoption of common data representations, ontologies and workflows across projects that differ widely in modality, temporal resolution, and regulatory context. Easier to adopt will likely be services with immediate practical benefit, such as shared collaboration spaces, and support for reproducible data and code handling.
+Since the project started only in October 2025, its contribution so far is mainly the coordinated establishment of shared structures; the central lesson at this stage is that, in a consortium centered on circadian and longitudinal data, INF work must integrate RDM, RSE, privacy, and domain-specific analytics from the outset rather than treating them as separate support functions.
 
 \subsection{Advancing Digital Research: RDM and RSE at TU Dresden}
-Research data analytics, including research data management throughout the entire data life cycle, are essential for state-of-the-art research.
+\label{subsec:vdr}
+Research data analytics, including RDM throughout the entire data life cycle, are essential for state-of-the-art research.
 At TU Dresden the unit ``\href{https://tu-dresden.de/zih/forschung/datenintensives_rechnen}{Distributed and Data Intensive Computing}'' (VDR) plays a key role in enabling data-driven research.
 It centrally integrates structures, initiatives, and projects (like the university’s service center research data or NFDI collaborations)
 to ensure efficient data workflows, starting from data creation to processing, sharing, and long-term archiving.
-VDR also runs INF-projects in several CRCs/TRR, see above, where data stewards support their interdisciplinary projects with robust and
-efficient research data management solutions.
-Together, they develop strategies, methods, and tools to handle data throughout its entire lifecycle.
+VDR also runs INF-projects in several CRCs and TRRs (subsecs.~\ref{subsec:crc1415}, \ref{subsec:trr265}, \ref{subsec:trr393}, \ref{subsec:trr408}) where data stewards support their interdisciplinary projects with robust and
+efficient RDM solutions.
+Together, they develop strategies, methods, and tools to handle data throughout its entire life cycle.
 The responsibilities of the data stewards range from maintaining the infrastructure, integrating computational resources,
 and providing support on data handling to enable researchers to operate seamlessly with a variety of data and datasets in their daily work.
 These efforts are essential for ensuring compliance with modern scientific standards and advancing reproducibility and accessibility
@@ -455,16 +523,17 @@ Through its innovative approach and strong interdisciplinary connections, CIDS, 
 to TU Dresden’s reputation in research excellence and digital transformation by addressing the challenges of the data-driven era of science.
 
 \subsection{Surveying the INF projects}
-To corroborate that, we did an informal survey during the workshop and in the weeks after the workshop by spreading the survey.
+To corroborate this overview of INF projects we did an informal survey during the workshop and in the weeks after the workshop by spreading the survey.
 In total, we received around 35 individual answers to the questions that we summarise here.
 When asked how much the original chosen education of the INF project aligned with the domain of the CRC two thirds of participants at least somewhat agreed.
-Also, around two thirds held at least a PhD level education, while a third held a master's or equivalent. Only around ten percent are currently doing a PhD,
-while almost a third has a permanent position. When asked about their contract hours, about a third was fully employed for the INF project, another third had half a position, and the remaining third was distributed across the range.
+Also, around two thirds held at least a PhD level education, while a third held a master's or equivalent.
+Only around ten percent are currently doing a PhD, while almost a third has a permanent position.
+When asked about their contract hours, about a third was fully employed for the INF project, another third had half a position, and the remaining third was distributed across the range.
 \begin{figure}
  \includegraphics[width=0.48\linewidth]{rse-rdm.png}
  \includegraphics[width=0.48\linewidth]{tools.png}
  \caption{
- In the left figure, we see that INF projects see themselves on a spectrum between RSEs and Data Stewards. We have no data on how people who answered ``Other'' see themselves.\\
+ In the left figure, we see that INF projects see themselves on a spectrum between RSEs and data stewards. We have no data on how people who answered ``Other'' see themselves.\\
  In the right figure, we see that while there is a broad spectrum of very specialised tools that come from each domain, there is also a core of common tooling
  that is used by everyone.
  }
@@ -477,7 +546,8 @@ the word cloud shows, that there is a common core of tooling that is shared acro
 We closed the survey with a question about what people would like to see at a follow-up workshop.
 Networking, Collaboration and the sharing of Best Practices are, again, very high on the list of requested topics.
 
-\section{Lessons Learned}
+\section{Lessons Learnt}
+\label{sec:lessons}
 As we have seen, the breadth of the INF projects across the scientific domains is very diverse.
 
 Nevertheless, there are core questions that each INF project tries to find answers to.
@@ -557,22 +627,21 @@ Overall, strengthening education and training in this space requires a combinati
 audience-specific design, integration of domain tools, and closer alignment with real research practices.
 Equally important are structural improvements, such as fostering cross-community exchange and recognising training-related work as a valuable professional contribution.
 
-
-\subsection{Reproducibility, Quality and Validation of created Artifacts}
-The workshop discussions established that while automated tools are rapidly advancing, human expertise remains central to artifact validation.
+\subsection{Reproducibility, Quality and Validation of created Artefacts}
+The workshop discussions established that while automated tools are rapidly advancing, human expertise remains central to artefact validation.
 In fields dealing with sensitive clinical or animal data, researchers are increasingly adopting a "human-in-the-loop" approach.
 Within this framework, machine learning models and locally-hosted or privacy preserving Large Language Models (LLMs) are utilised to suggest metadata or classify complex datasets, which are then verified through expert visualisation and manual checks.
 This method ensures that data privacy is maintained while leveraging AI to handle the increasing volume of research outputs.
 
-Technical validation becomes more complex as software grows in scale, requiring sophisticated containerization and environment management.
+Technical validation becomes more complex as software grows in scale, requiring sophisticated containerisation and environment management.
 Participants identified tools such as Pixi and the MaRDI packaging system as essential for managing dependencies and namespaces in large-scale projects.
 For dynamic datasets that change over time, static identifiers alone are often insufficient to guarantee reproducibility.
 Instead, modular Jupyter notebooks and data chunking strategies are used to document specific states and edge cases, ensuring results can be reconstructed even when the underlying data are not static.
 Furthermore, implementing CI/CD pipelines and automated testing allows for the continuous monitoring of software quality, specifically checking for breaking changes or inconsistencies caused by random seeds and stochastic processes.
 
-Finally, the long-term quality of artifacts depends on the rigorous use of Electronic Lab Notebooks (ELNs) like \href{https://chemotion.net/}{Chemotion}, eLabFTW, and Sciformation to capture  experimental procedures and data provenance at the point of origin.
+Finally, the long-term quality of artefacts depends on the rigorous use of ELNs like \href{https://chemotion.net/}{Chemotion}, eLabFTW, and Sciformation to capture  experimental procedures and data provenance at the point of origin.
 Integrating ELNs with established repositories like Dataverse/DaRUS enables structured, metadata-rich publication of experimental data, while version control platforms like GitHub support the parallel management of research software.
-Despite these tools, the workshop highlighted a persistent gap in the quality of researcher-provided metadata, pointing to the need for better training and workflow integration to ensure artifacts remain verifiable and reusable over the long term.
+Despite these tools, the workshop highlighted a persistent gap in the quality of researcher-provided metadata, pointing to the need for better training and workflow integration to ensure artefacts remain verifiable and reusable over the long term.
 
 \subsection{Workflows and Pipelines}
 A common topic occurring in INF projects is helping researchers in forming pipelines of the software they use.
@@ -600,31 +669,68 @@ Possible solutions that the participants discussed are the use of an RAG (Retrie
 or easy/good documentation.
 
 \section{Summary}
-I would like to end this on something that binds the INF projects together, irrespective of the domain they are in.
-Any other ideas for a summary?
-\todo{maybe interesting: \cite{Hausen_Rosenberg_Trautwein-Bruns_Schwarz_2020}}
+Comparing the initial problems of the INF projects in \autoref{sec:history}
+with the actual tasks that INF projects perform in \autoref{sec:inf-in-germany}
+and what we identified as ongoing challenges in the workshop in \autoref{sec:lessons}
+we observe that technical challenges have evolved, while the human factor still is tricky.
+We observe that the provision of long-term storage does not pose such a large issue anymore. This has often either been solved within the CRC or through
+collaborations with institutions within the universities or within the framework of the NFDI.
+This points to a greater shift in the landscape surrounding the INF projects.
+Libraries and compute centres themselves offer to become part of the CRC proposals as evidenced by examples from \autoref{subsec:vdr}, the literature \cite{Hausen_Rosenberg_Trautwein-Bruns_Schwarz_2020},
+and generalised into a template form in \cite{Kempf2026}.
+The formation of the NFDI in 2020 brought a new push to the available networks for the INF projects, since
+the consortia now form a domain specific network of sorts.
+Also, numerous RDM specific networks emerged, like \href{https://saxfdm.de/}{SaxFDM}, that offer local, RDM specific networks.
+INF projects leaning into software development have found networks in the \href{https://de-rse.org/}{RSE} movement.
+Also in this manuscript, we have categorised INF projects where they lie on the RSE-RDM spectrum, but more broadly speaking,
+these are all instances of \href{https://drtp-skills.ac.uk/}{dRTPs}, digital Research Technical Professionals.
+INF projects will probably be even more diverse, if data scientists, AI specialists and other dRTPs can provide skills useful for the CRCs.
+At the same time, INF projects increasingly fulfil an important mediating role between domain scientists, 
+institutional infrastructure providers, and national initiatives such as the NFDI. Beyond providing technical solutions, 
+they translate evolving requirements between communities with different practices, expectations, and technical backgrounds. 
+This bridging function is becoming ever more critical as collaborative and data intensive research continues to grow in complexity.
+So with respect to the communities and the professionalisation the INF projects have matured, but what has stayed the same?
+INF projects in CRCs are subject to the project based funding of the DFG, therefore the CRC itself cannot provide a stable position.
+This also brings up again the unresolved problem of how to provide continuity across personnel rotations in INF projects.
+It is encouraging to see that libraries and compute centres are stepping up here, since these are institutions that
+can provide long-term career perspectives for experts employed in INF projects and can provide a fallback in the case of rotations.
+Hopefully, in the future more improvements can be made \eg, by combining the political voice of the data stewards and the RSE movement.\\
+Comparing with \cite{mueckschel2006} a couple of other challenges still persist, such as INF projects struggling
+to adapt their platforms to the scientists’ evolving requirements, or how to design platforms that are open and extensible
+while still being easy enough to be accepted by users.
+We have detailed some of these struggles and some of this generation’s solutions in our lessons learnt in \autoref{sec:lessons}.
+Adapting to rapidly changing scientific questions will always be a challenge to the person filling out the role of the INF project in a CRC.
+But together with the strong networks they are embedded in\footnote{
+We founded a network for INF projects: \url{https://www.listserv.dfn.de/sympa/info/inf-projects-in-crcs}.
+}, this is a challenge that INF projects everywhere happily take on.
+
 
 \begin{acknowledge}
-We acknowledge the hospitality of the University of Stuttgart for hosting this workshop.
-FG acknowledges funding from the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) through the CRC 1170 “Tocotronics”, project Z03 - project number \geprislink{258499086}.
-RD thanks the DFG for its support through the CRC 1415 "Chemistry of Synthetic Two-Dimensional Materials", project INF - project number \geprislink{417590517}.
+We acknowledge the hospitality of the university of Stuttgart for hosting this workshop.
 AA acknowledges funding from the German Research Foundation (DFG) through the TRR 265 "Losing and Regaining Control over Drug Intake: From Trajectories to Mechanisms to Interventions", project  Z/INF - project number \geprislink{402170461}.
-LS acknowledges funding from the German Research Foundation (DFG) through the TRR 393 "Trajectories of Affectie Disorders: Cognitive-Emotional Mechanisms of Symptom Change", project  Z/INF - project number \geprislink{521379614}.
-JF acknowledges that this work was funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – TRR: 408/1 2025 – Project number: \geprislink{531327426}, project INF.
-HO acknowledges funding from the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) through the CRC 1313 “Interface-Driven Multi-Field Processes in Porous Media – Flow, Transport and Deformation”, project INF - project number \geprislink{327154368}.
-MJ, TP, FP acknowledge funding from the DFG through the CRC 1340 "Matrix in Vision", project INF - project number \geprislink{372486779}.
-MG, MP, LFB, AM, FP acknowledge funding from the DFG through the TRR 418 " Foundations of Circadian Medicine", project INF - project number \geprislink{541063275}.
-MM acknowledges the funding from DFG, CRC 1646/1 2024 -- \geprislink{512393437}, project INF.
-ND acknowledges the funding from DFG, CRC 1638, project INF - project number \geprislink{511488495}.
+AG, SJ, RM, PR, and HR acknowledge funding in the course of TRR 391 "Spatio-temporal Statistics for the Transition of Energy and Transport'' (\geprislink{520388526}) by the DFG.
+FG acknowledges funding from the DFG through the CRC 1170 “Tocotronics”, project Z03 - project number \geprislink{258499086}.
+FL acknowledges funding from the Klaus Tschira Foundation through project “FutuRSI” (00.048.2024).
+HO acknowledges funding from the DFG through the CRC 1313 “Interface-Driven Multi-Field Processes in Porous Media – Flow, Transport and Deformation”, project INF - project number \geprislink{327154368}.
+JF acknowledges funding from the DFG – TRR: 408/1 2025 – Project number: \geprislink{531327426}, project INF.
 JSG and MH acknowledge funding from the DFG through the TRR 379 "Neuropsychobiology of Aggression", project INF - project number \geprislink{512007073}, and the CRC 1451 "Key Mechanisms of Motor Control in Health and Disease", project INF - project number \geprislink{458705875}.
-MMB acknowledges funding from the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) through the CRC 1629 Negation in Language and Beyond, project INF - project number \geprislink{537324246}.
+LS acknowledges funding from the DFG through the TRR 393 "Trajectories of Affectie Disorders: Cognitive-Emotional Mechanisms of Symptom Change", project  Z/INF - project number \geprislink{521379614}.
+MG, MP, LFB, AM, FP acknowledge funding from the DFG through the TRR 418 ``Foundations of Circadian Medicine'', project INF - project number \geprislink{541063275}.
+MJ, TP, FP acknowledge funding from the DFG through the CRC 1340 "Matrix in Vision", project INF - project number \geprislink{372486779}.
+MM acknowledges the funding from DFG, CRC 1646/1 2024 -- \geprislink{512393437}, project INF.
+MMB acknowledges funding from the DFG through the CRC 1629 ``Negation in Language and Beyond'', project INF - project number \geprislink{537324246}.
+ND acknowledges the funding from DFG, CRC 1638, project INF - project number \geprislink{511488495}.
+RD thanks the DFG for its support through the CRC 1415 "Chemistry of Synthetic Two-Dimensional Materials", project INF - project number \geprislink{417590517}.
+VD acknowledges funding from the DFG Project-ID \geprislink{388390466}-TRR 247 (subproject INF) and CRC~1625, project number \geprislink{506711657} (subproject INF).
+
 \end{acknowledge}
 
 \begin{aiuse}
-AI has been used for copyediting purposes.
+AI has been used for copy-editing purposes.
 \end{aiuse}
 
 \begin{data}
+For data privacy reasons, we only list aggregated data in this publication.
 \end{data}
 
 \bibliographystyle{eceasst}

@@ -1,20 +1,17 @@
-# RSEs-in-Large-Research-Consortia
+# RSEs in large research consortia
+This is the workshop report for our workshop at de-RSE26
 
-This repository contains the material and follow-up links from the workshop RSEs in Large Research Consortia in deRSE26.
+## Spelling
 
-Link to RSEs in Large Research Consortia abstract in deRSE26: 
-https://events.hifis.net/event/2945/contributions/21106/
+**We use British English**
 
-Link to the pad of the workshop in deRSE26:
-https://pad.gwdg.de/-hUsaRN3RLiorxv2-OOMUg​
+The CI/CD pipeline runs `aspell`. To run it locally use
+```bash
+aspell -t --home-dir=. -c -d en_GB report.tex
+```
+A local list of words is used.
 
-## Stay Connected
-
-Mailing list:
-https://www.listserv.dfn.de/sympa/subscribe/inf-projects-in-crcs?previous_action=info
-
-Matrix space:
-https://matrix.to/#/#inf-projects-in-crcs:matrix.org
-
-Meeting Notes
-https://cryptpad.digitalcourage.de/code/#/2/code/edit/FQ8Lv5OdgTztjCQGC8BE+e0Z/
+To get a list of misspelled words and their line number use
+```bash
+bash spellcheck.sh report.tex
+```
