@@ -9,6 +9,8 @@
 \usepackage{orcidlink}
 \usepackage{accsupp}
 \usepackage{todonotes}
+\usepackage{lineno}
+\linenumbers
 
 %Mathematical formula accessibility and machine-readability: if you add
 \usepackage[accsupp]{axessibility}
@@ -23,6 +25,7 @@
 
 \newcommand{\Eg}{E.\,g.}
 \newcommand{\eg}{e.\,g.}
+\newcommand{\ie}{i.\,e.}
 
 % ================================
 % Environment for AI Use
@@ -50,7 +53,7 @@
 \author{
 Hamza Oukili\authorOrcid{0000-0003-4695-8532}\authorRef{1},
 Florian Goth\authorOrcid{0000-0003-2707-4790}\authorRef{2},
-Frank Löffler\authorOrcid{0000-0001-6643-6323}\authorRef{3},
+Frank Löffler\authorOrcid{0000-0001-6643-6323}\authorRef{3}${}^,$\authorRef{14},
 Mercedes~Martinez~Bruera\authorOrcid{0009-0004-2891-7045}\authorRef{4},
 Ron Dockhorn\authorOrcid{0000-0002-5268-5430}\authorRef{8},
 Alvaro Aguilera\authorOrcid{0000-0001-9324-8555}\authorRef{8},
@@ -75,7 +78,8 @@ Andreas Groll\authorOrcid{0000-0001-6787-9118}\authorRef{13},
 Svenja Jedhof\authorOrcid{0009-0008-2939-9103}\authorRef{13},
 Rouven Michels\authorOrcid{0000-0002-5433-6197}\authorRef{13},
 Philip Raatz\authorOrcid{0000-0002-9133-0077}\authorRef{12},
-Helena Rahaus\authorOrcid{0009-0009-8843-8528}\authorRef{12}
+Helena Rahaus\authorOrcid{0009-0009-8843-8528}\authorRef{12},
+Victor Dudarev\authorOrcid{0009-0000-0000-0000}\authorRef{15},
 } % Authors and references to addresses
 
 \institute{% Institutes with labels
@@ -91,7 +95,9 @@ Helena Rahaus\authorOrcid{0009-0009-8843-8528}\authorRef{12}
 \autlabel{10} Heidelberg University Biochemistry Center (BZH), Heidelberg, Germany,\\
 \autlabel{11} Forschungszentrum Jülich, Jülich, Germany,\\
 \autlabel{12} RWI - Leibniz Institute for Economic Research: Essen, Germany,\\
-\autlabel{13} TU Dortmund University, Dortmund, Germany\\
+\autlabel{13} TU Dortmund University, Dortmund, Germany,\\
+\autlabel{14} de-RSE e.V. --- Society for Research Software in Germany\\
+\autlabel{15} Materials Discovery and Interfaces (MDI), Ruhr University Bochum, Germany
 }
 
 \abstract{% Abstract of the article
@@ -393,6 +399,20 @@ participants to both RSE principles (code writing practices, version control too
 specific programming workflows), and combining theoretical mathematics with practical usage and
 extension of products within the OSCAR universe.
 
+\subsection{Project INF - Research Data Management and AI-Driven Knowledge Discovery, TRR 247 – Heterogeneous Oxidation Catalysis in the Liquid Phase, Ruhr University Bochum, University of Duisburg-Essen}
+The goal of TRR~247, which started in mid-2018, is to enable the rational design of new, abundant, and superior catalysts based on mixed metal oxides for catalytic selective oxidation processes in the liquid phase.
+In doing so, TRR~247 aims to contribute to the efficient use of sustainable resources for the production of chemicals in a post-fossil era.
+It should be noted that the INF project was introduced into the TRR only from Funding Period 2, \ie, in the second half of 2022, which may be considered somewhat delayed given the challenges associated with handling heterogeneous data in modern materials science.
+It is commonly assumed that university structures provide reliable IT infrastructure for the needs of TRRs; however, our project experienced the opposite when, in autumn 2022, following a successful cyberattack on the IT infrastructure of the University of Duisburg-Essen, most systems – including the RDMS used within the TRR – became unavailable and, as it later turned out, irrecoverably lost.
+Nevertheless, considering the TRR’s demand for handling multimodal materials science data, a Minimum Viable Product (MVP) prototype of an extensible RDMS system (ASP.NET Core 7 + SQL Server 2022) was developed within a very short time.
+By March 2023, it had already been presented to the consortium and put into operation on dedicated hardware acquired through CRC/TRR~247 funding allocated to the INF project.
+A separate story concerns the recovery of research data from the first Funding Period using a damaged virtual machine backup that was provided almost a year after the incident.
+This involved numerous professional challenges, ranging from recovering the database from a non-functional PostgreSQL instance to reverse-engineering the database structure and migrating all data into the new extensible data model of the current RDMS MatInf.
+The main lesson learned was that our data are ultimately our own responsibility – above all, the responsibility of the INF project – which consequently established a geographically distributed, disaster-resilient infrastructure providing uninterrupted service for the TRR, involving researchers from Bochum, Duisburg, Essen, Kiel, Mülheim an der Ruhr, and Kaiserslautern.
+In less than four years, the INF project has achieved several notable milestones: (i) we successfully recovered all data from the first Funding Period from near-total loss; (ii) the open-source RDMS MatInf, \href{https://eln-finder.ulb.tu-darmstadt.de/items/8aefad94-9f2d-4b40-b94f-21c9419eb3be}{registered in the ELN Finder}, continues to evolve and is being tightly integrated into researchers’ workflows \cite{Dudarev2025}; (iii) the main TRR repository has been \href{https://doi.org/10.17616/R31NJNUG}{registered in re3data.org} as the primary repository for CRC/TRR~247; (iv) successful integration with the NFDI Infrastructure Proxy service provided by IAM4NFDI (Base4NFDI) has been achieved, and collaborations with NFDI-MatWerk and FAIRmat are ongoing; and (v) regular workshops and hands-on sessions are conducted to train users, including long-term dataset publication with DOI assignment via Zenodo in support of scientific publications.
+Integration with Coscine / DataStorage.nrw for long-term data archiving is planned.
+In February 2026, TRR~247 successfully passed the DFG evaluation and will be extended into a third Funding Period, while the INF project itself received highly positive recognition and will continue its mission.
+
 \subsection{Project Q02 - Data Management and Training Platform for AMD Research, \href{https://gepris.dfg.de/gepris/projekt/512007073?language=en}{TRR379 - Neuropsychobiology of Aggression: A Transdiagnostic Approach in Mental Disorders}, RWTH Aachen University, Goethe University Frankfurt, Central Institute of Mental Health, Forschungszentrum Jülich, University Hospital Aachen}
 
 This project develops a decentralised FAIR-compliant data platform to support integration, harmonisation, and analysis of longitudinal, transdiagnostic datasets across participating sites in the consortium.
@@ -417,18 +437,18 @@ A key lesson learnt is that successful implementation of such infrastructures re
 
 \subsection{Project INF - Data Management for Reproducible Data-Driven Computational Modeling Cross-Species and Cross-Labs, \href{https://gepris.dfg.de/gepris/projekt/458705875?language=en}{CRC1451 - Key Mechanisms of Motor Control in Health and Disease}, University of Cologne, European Neuroscience Institute Göttingen, Goethe University Frankfurt, Hebrew University of Jerusalem, University of Münster, German Center for Neurodegenerative Diseases, Forschungszentrum Jülich, Max Planck Institute for Biology of Ageing, Max Planck Institute for Metabolism Research}
 
-This INF project operates at the interface of computational neuroscience, data management, and scientific computing, supporting the overarching goal of CRC1451 to understand motor control across biological scales and species.
+This INF project operates at the interface of computational neuroscience, data management, and scientific computing, supporting the overarching goal of CRC~1451 to understand motor control across biological scales and species.
 The INF project provides expertise, tools, services, and training for reproducibly accessing, describing, and modelling data generated across all projects, including the central service projects Z02 and Z03.
 A key task is the continuous assessment of workflows, resource requirements, and data analysis practices to identify differences that may affect data comparability and reusability. 
-The INF project is embedded in a broad network within the CRC1451, working closely with experimental and computational projects across all domains and acting as a central hub for data handling and exchange.
+The INF project is embedded in a broad network within the CRC~1451, working closely with experimental and computational projects across all domains and acting as a central hub for data handling and exchange.
 \href{https://www.datalad.org/)}{DataLad} is the main RDM solution adopted by the CRC to address the challenge of introducing structure and version control to, ensuring reproducibility of, and supporting collaboration on heterogeneous data and workflows across projects with very different experimental setups and analysis methods.
 
 
 \subsection{Project INF - Information infrastructure project, TRR408 - AgiMo: Data-driven agile planning for responsible mobility, TUD Dresden University of Technology}
-AgiMo (TRR 408) is a CRC for the advancement of traffic, transportation and mobility planning.
+AgiMo (TRR~408) is a CRC for the advancement of traffic, transportation and mobility planning.
 It aims to develop a set of consistent mobility and transportation planning methods, including behavioural data and models for all modes of mobility from walking to motorised vehicles, and integrating them into a Digital Twin that allows to involve different stakeholder preferences to create future scenarios for responsible mobility.
 
-The goal of the INF project of TRR 408 is to provide a virtual research environment (VRE).
+The goal of the INF project of TRR~408 is to provide a virtual research environment (VRE).
 The VRE acts as a centralised system that comprises different software components and services that foster research data management and collaboration, e.\,g., by providing data storage systems, workflow automation, as well as the integration of the digital twin to allow modelling of transportation and mobility systems, their parametrisation and subsequent simulation of city-wide traffic flow scenarios based on real-world data. To collect requirements for the VRE, the INF team together with the Service Center Research Data\footnote{\url{https://tu-dresden.de/forschung-transfer/services-fuer-forschende/kontaktstelle-forschungsdaten}} conducted interviews with all other AgiMo projects.
 
 \subsection{Advancing Digital Research: RDM and RSE at TU Dresden}
@@ -639,19 +659,22 @@ We founded a network for INF projects: \url{https://www.listserv.dfn.de/sympa/in
 
 \begin{acknowledge}
 We acknowledge the hospitality of the university of Stuttgart for hosting this workshop.
-FG acknowledges funding from the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) through the CRC 1170 “Tocotronics”, project Z03 - project number \geprislink{258499086}.
-RD thanks the DFG for its support through the CRC 1415 "Chemistry of Synthetic Two-Dimensional Materials", project INF - project number \geprislink{417590517}.
 AA acknowledges funding from the German Research Foundation (DFG) through the TRR 265 "Losing and Regaining Control over Drug Intake: From Trajectories to Mechanisms to Interventions", project  Z/INF - project number \geprislink{402170461}.
-LS acknowledges funding from the German Research Foundation (DFG) through the TRR 393 "Trajectories of Affectie Disorders: Cognitive-Emotional Mechanisms of Symptom Change", project  Z/INF - project number \geprislink{521379614}.
-JF acknowledges, that this work was funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – TRR: 408/1 2025 – Project number: \geprislink{531327426}, project INF.
-HO acknowledges funding from the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) through the CRC 1313 “Interface-Driven Multi-Field Processes in Porous Media – Flow, Transport and Deformation”, project INF - project number \geprislink{327154368}.
-MJ, TP, FP acknowledge funding from the DFG through the CRC 1340 "Matrix in Vision", project INF - project number \geprislink{372486779}.
-MG, MP, LFB, AM, FP acknowledge funding from the DFG through the TRR 418 ``Foundations of Circadian Medicine'', project INF - project number \geprislink{541063275}.
-MM acknowledges the funding from DFG, CRC 1646/1 2024 -- \geprislink{512393437}, project INF.
-ND acknowledges the funding from DFG, CRC 1638, project INF - project number \geprislink{511488495}.
+AG, SJ, RM, PR, and HR acknowledge funding in the course of TRR 391 "Spatio-temporal Statistics for the Transition of Energy and Transport'' (\geprislink{520388526}) by the DFG.
+FG acknowledges funding from the DFG through the CRC 1170 “Tocotronics”, project Z03 - project number \geprislink{258499086}.
+FL acknowledges funding from the Klaus Tschira Foundation through project “FutuRSI” (00.048.2024).
+HO acknowledges funding from the DFG through the CRC 1313 “Interface-Driven Multi-Field Processes in Porous Media – Flow, Transport and Deformation”, project INF - project number \geprislink{327154368}.
+JF acknowledges funding from the DFG – TRR: 408/1 2025 – Project number: \geprislink{531327426}, project INF.
 JSG and MH acknowledge funding from the DFG through the TRR 379 "Neuropsychobiology of Aggression", project INF - project number \geprislink{512007073}, and the CRC 1451 "Key Mechanisms of Motor Control in Health and Disease", project INF - project number \geprislink{458705875}.
-MMB acknowledges funding from the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) through the CRC 1629 ``Negation in Language and Beyond'', project INF - project number \geprislink{537324246}.
-AG, SJ, RM, PR, HR acknowledge funding in the course of TRR 391 "Spatio-temporal Statistics for the Transition of Energy and Transport'' (\geprislink{520388526}) by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation).
+LS acknowledges funding from the DFG through the TRR 393 "Trajectories of Affectie Disorders: Cognitive-Emotional Mechanisms of Symptom Change", project  Z/INF - project number \geprislink{521379614}.
+MG, MP, LFB, AM, FP acknowledge funding from the DFG through the TRR 418 ``Foundations of Circadian Medicine'', project INF - project number \geprislink{541063275}.
+MJ, TP, FP acknowledge funding from the DFG through the CRC 1340 "Matrix in Vision", project INF - project number \geprislink{372486779}.
+MM acknowledges the funding from DFG, CRC 1646/1 2024 -- \geprislink{512393437}, project INF.
+MMB acknowledges funding from the DFG through the CRC 1629 ``Negation in Language and Beyond'', project INF - project number \geprislink{537324246}.
+ND acknowledges the funding from DFG, CRC 1638, project INF - project number \geprislink{511488495}.
+RD thanks the DFG for its support through the CRC 1415 "Chemistry of Synthetic Two-Dimensional Materials", project INF - project number \geprislink{417590517}.
+VD acknowledges funding from the DFG Project-ID \geprislink{388390466}-TRR 247 (subproject INF) and CRC~1625, project number \geprislink{506711657} (subproject INF).
+
 \end{acknowledge}
 
 \begin{aiuse}
