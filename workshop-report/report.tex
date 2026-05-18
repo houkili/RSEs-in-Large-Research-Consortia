@@ -243,7 +243,7 @@ Since 2024 in the start of the 2nd funding period, the INF project accompanied t
 infrastructure to support reproducibility and collaboration across 25 scientific projects and multiple partner institutions (Leibniz/Helmholtz) fostering harmonised data management strategies.
 The primary focus has been on RDM—installing and maintaining scalable infrastructure
 (\eg, local \href{https://nomad-lab.eu/nomad-lab/nomad-oasis.html}{NOMAD Oasis} of \href{https://www.fairmat-nfdi.eu/fairmat/}{FAIRmats} \href{https://nomad-lab.eu/nomad-lab/nomad.html}{NOMAD} platform),
-integrating electronic lab notebooks (\eg, \href{https://www.elabftw.net/}{eLabFTW}),
+integrating Electronic Lab Notebooks(ELNs) (\eg, \href{https://www.elabftw.net/}{eLabFTW}),
 and providing regular training workshops for doctoral researchers and project leaders on FAIR data principles and infrastructure use.
 Research Software Engineering (RSE) tasks, such as developing data pipelines, writing file parsers for proprietary formats as well as automatic data processing, complement these efforts.
 The CRC\,1415 and the INF project is actively embedded in national and international networks,
@@ -253,7 +253,7 @@ Locally, the INF project has strong institutional connections with TU Dresden’
 and Service Center Research Data, and the Saxon State and University Library Dresden (SLUB)
 combining technical, infrastructural, and domain-specific knowledge.
 A significant challenge has been the consistent implementation of FAIR data principles and harmonised metadata standards across the CRC’s heterogeneous experimental and theoretical projects,
-as well as the unified rollout of the electronic lab notebooks eLabFTW and local data sharing platform NOMAD Oasis, due to diverse workflows and technical requirements. 
+as well as the unified rollout of the ELN eLabFTW and local data sharing platform NOMAD Oasis, due to diverse workflows and technical requirements.
 In contrast, open-access paper publishing have been widely implemented and open-access data publishing via \href{https://zenodo.org/communities/crc1415/about}{Zenodo}, \href{https://opara.zih.tu-dresden.de/home}{OPARA}, and \href{https://rodare.hzdr.de/communities/crc1415}{RODARE} grows in adoption,
 directly supporting the scientific outreach.
 The experience in CRC\,1415 underscores that technical infrastructure alone is insufficient; sustained training, community engagement, and the early embedding of RDM and RSE expertise within the CRC’s data life cycle are essential for the successful and sustainable adoption of open science practices and FAIR research activities.
@@ -328,7 +328,7 @@ While the publication of scientific articles is well established, the publicatio
 Although the INF project can provide guidance and technical support, the responsibility for preparing and publishing datasets remains with the researchers themselves.
 Also, interest remains low in adopting data storage with FAIR data principles, since most research groups already have functioning data storage techniques and do not see the necessity in switching.
 In contrast, central communication tools were well received although multi-platform use in different institutions hinders a streamlined flow of information.
-Furthermore, the introduction of Electronic Lab Notebooks (ELNs) was comparatively well received, \eg~due to the more automated documentation process of metadata and the simplicity in moving away from traditional paper-based documentation.
+Furthermore, the introduction of ELNs was comparatively well received, \eg~due to the more automated documentation process of metadata and the simplicity in moving away from traditional paper-based documentation.
 
 One of the central lessons learned in the project is that successful research data management requires both sustainable infrastructure and active engagement.
 The FAIR principles, which are essential to ensure the long-term reusability of research data and software, can only be effectively implemented when researchers receive practical training and clear workflow recommendations.
@@ -350,7 +350,7 @@ The INF project addresses this --- sensitising researchers to the importance of 
 A network of data stewards embedded within CRC groups forms the backbone of this approach, supported by INF seminars and one-to-one meetings with groups as needed.
 The seminars tackle topics that often feel overwhelming --- data organisation, persistent identifiers, data management plans --- and break them down into steps that stewards can act on easily within their groups.
 The aim is to show researchers why better RDM is worth doing, not to create bureaucratic overhead.
-The main technical focus has been the electronic lab notebook (ELN) \href{https://www.elabftw.net/}{eLabFTW}.
+The main technical focus has been the ELN \href{https://www.elabftw.net/}{eLabFTW}.
 Support goes beyond introducing the tool: a starter pack of templates covering common lab resources such as plasmids, antibodies, and cell lines provides groups with a ready-made structure including metadata fields with controlled vocabularies and linking logic between entries, making good documentation the path of least resistance rather than an added burden.
 A practical barrier for groups with existing reagent databases was migration: the INF team developed \href{https://github.com/sfb1638/elAPI\_Plugins}{\textit{elAPI Plugins}}, which uses \href{https://github.com/uhd-urz/elAPI}{\textit{elAPI}} from the Heidelberg University Computing Center (URZ) to batch-generate ELN entries from pre-defined templates, making the migration a one-time task.
 Within one year, active eLabFTW use in the CRC grew significantly in terms of number of groups and extent of use with immediate perceived benefit to the users.
@@ -637,7 +637,7 @@ For dynamic datasets that change over time, static identifiers alone are often i
 Instead, modular Jupyter notebooks and data chunking strategies are used to document specific states and edge cases, ensuring results can be reconstructed even when the underlying data are not static.
 Furthermore, implementing CI/CD pipelines and automated testing allows for the continuous monitoring of software quality, specifically checking for breaking changes or inconsistencies caused by random seeds and stochastic processes.
 
-Finally, the long-term quality of artefacts depends on the rigorous use of Electronic Lab Notebooks (ELNs) like \href{https://chemotion.net/}{Chemotion}, eLabFTW, and Sciformation to capture  experimental procedures and data provenance at the point of origin.
+Finally, the long-term quality of artefacts depends on the rigorous use of ELNs like \href{https://chemotion.net/}{Chemotion}, eLabFTW, and Sciformation to capture  experimental procedures and data provenance at the point of origin.
 Integrating ELNs with established repositories like Dataverse/DaRUS enables structured, metadata-rich publication of experimental data, while version control platforms like GitHub support the parallel management of research software.
 Despite these tools, the workshop highlighted a persistent gap in the quality of researcher-provided metadata, pointing to the need for better training and workflow integration to ensure artefacts remain verifiable and reusable over the long term.
 
