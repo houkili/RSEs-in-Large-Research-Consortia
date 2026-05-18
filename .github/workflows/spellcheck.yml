@@ -13,4 +13,4 @@ jobs:
       - name: run spellchecker
         run: |
           # run spell checker on file
-          bash spellcheck.sh career-pathways.tex
+          bash spellcheck.sh workshop-report/report.tex
