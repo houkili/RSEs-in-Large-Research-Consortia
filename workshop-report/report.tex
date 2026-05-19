@@ -141,7 +141,7 @@ Building on that and on the workshop held at the de-RSE26 conference, we collect
 \section{Introduction}
 
 Collaborative Research Centres (CRCs), funded by the German Research Foundation (DFG), are a cornerstone of Germany's third-party funding landscape, bringing together researchers from different disciplines around shared scientific questions over periods of up to twelve years.
-As digital tools have become central to the research process — from data collection and analysis through to publication and long-term archiving — CRCs have increasingly pooled these responsibilities in dedicated sub-projects known as INF projects (German: "Informationsmanagement und Informationsinfrastruktur"), formally also known as Z-Projects (German: "Zentralprojekt").
+As digital tools have become central to the research process – from data collection and analysis to publication and long-term archiving — CRCs have increasingly pooled these responsibilities in dedicated sub-projects known as INF projects (German: "Informationsmanagement und Informationsinfrastruktur"), formally also known as Z-Projects (German: "Zentralprojekt").
 These units provide research data management (RDM) and research software engineering (RSE) services to all projects within a CRC, while contending with the particular demands of interdisciplinary, long-running collaborations.
 Despite their growing numbers, INF projects are rarely documented as a collective: their structures, practical approaches, and accumulated experience tend to remain within individual CRCs.
 This report attempts to change that.
@@ -150,35 +150,32 @@ We first catalogue current and past INF projects across Germany's research lands
 \section{History of the INF projects}
 \label{sec:history}
 The beginnings of specialised, shared positions within CRCs can be traced back to the foundation of the CRC 299, which was established in 1997 to survey the use of land under various characteristics.
-Being interdisciplinary and already aiming for the maximum runtime of 12 years, it was apparent from the beginning \cite{mueckschel2006} that a careful management of data has to happen in order to be useful for all associated disciplines.
+Being interdisciplinary and already aiming for the maximum runtime of 12 years, it was apparent from the beginning \cite{mueckschel2006} that a careful management of data had to happen in order to be useful for all associated disciplines.
 Around the same time, various incidents of scientific misconduct prompted the German Research Foundation (GRF, DFG) to highlight in their
 memorandum on ``Safeguarding Good Scientific Practice'' \cite{DFG1998}
-the importance of research data as ``primary data''  and has put out the recommendation to take special care of those data at the host institution.
-Combining both requirements, more CRCs started to include personnel who handle data management.
+the importance of treating research data as ``primary data'', putting out the recommendation to take special care of those data at the host institution.
+Combining both requirements, more CRCs started to include personnel to handle data management.
 A first workshop \cite{SFB299-2004, SFB299-2005} on comparing lessons learnt was organised by CRC 299 and CRC 552 in 2004 in Gießen.
 The respective follow-up workshop was organised again by CRC~299 and CRC~552 in 2007 \cite{SFB299-2007}.
-Around the same time, the process of having dedicated projects for the information infrastructure was formalised (based on the precursor work of CRC~299 and CRC~552)
-and since 2007, INF projects can be applied for in CRCs at the GRF, with the first projects starting around 2009 \cite{Forschungsdateninfrastruktur2013}.
-Moving on, the regional focus shifts to Cologne.
-In 2009, a workshop was organised by TRR~32 and CRC~806 bringing together almost 80 participants from a diverse set of disciplines who published their experiences in a
-Post-Proceedings volume \cite{curdt787}.
-The next workshop was organised by the project ``Radieschen (Rahmenbedingungen einer disziplinübergreifenden Forschungsdateninfrastruktur)''
-in Göttingen \cite{Forschungsdateninfrastruktur2013}.
-Among the participants they observed, that most INF projects were with central institutions like libraries and computing centres and maintained central
-RDM infrastructures for research collaboration. And, again, acceptance of the INF projects was brought up.\\
-Between 2013 and 2015, the number of funded INF projects increased, and hence the funding line became more established \cite{Engelhardt2013Forschungsdatenmanagement, bastian_2025}.
+Around the same time, the process of having dedicated projects for the information infrastructure was formalised (based on the precursor work of CRC~299 and CRC~552).
+Since 2007, INF projects have been eligible for funding in CRCs at the GRF, with the first projects starting around 2009 \cite{Forschungsdateninfrastruktur2013}.
 
-Another follow-up workshop was held in Göttingen in 2018 \cite{Roertgen2019}.
-Around 2022, the DFG started to hand out guidelines for the INF projects \cite{bastian_2025}.
-Another workshop that should belong in this list was organised by the DINI/nestor AG Forschungsdaten in 2020 \cite{Rizzolli_2021},
-which discussed how much the tasks of an INF project align with the tasks of data stewards.
-Again in Cologne, another workshop was hosted \cite{bastian_2025}. A notable insight is, that no participant has been to any
-of the previous workshops, and it was also noted, that following the rules is still a better motivator for following data
-management guidelines, rather than any intrinsic motivation from the scientists.
-In March 2026, we held a small workshop at de-RSE26. Notable here is that as many Research Software Engineers have been present
-as Research Data Managers.
+The focus then shifted to Cologne. In 2009 TRR~32 and CRC~806 organised a workshop of nearly 80 participants of diverse disciplines, 
+later documented in a Post-Proceedings volume \cite{curdt787}. 
+A subsequent workshop by the project ``Radieschen (Rahmenbedingungen einer disziplinübergreifenden Forschungsdateninfrastruktur)'' 
+in Göttingen \cite{Forschungsdateninfrastruktur2013} found that most INF projects cooperated with central institutions such as libraries and computing centers, mantained central RDM infrastructures and aced reluctance from researchers to accept changes. 
 
-Already early on \cite{mueckschel2006} it was noted that central challenges of a data management solution will be
+Between 2013 and 2015, the number of funded INF projects increased, and hence the funding line became more established 
+\cite{Engelhardt2013Forschungsdatenmanagement, bastian_2025}. Further workshops followed in Göttingen in 2018 \cite{Roertgen2019}, 
+and in 2020 by the DINI/nestor AG Forschungsdaten \cite{Rizzolli_2021}, 
+which examined the overlaps between INF projects and data stewardship. 
+Another workshop in Cologne noted that non of the participants had been to any of the previous workshops, 
+and that compliance with the relevant guidelines and rules remained a stornger motivation for good research data management practices 
+than intrinsic motivation from the researchers \cite{bastian_2025}. 
+In March 2026, a small de-RSE26 workshop showed an equal presence of Research Software Engineers and Research Data Managers.
+
+
+Already early on \cite{mueckschel2006} it was noted that central challenges of data management solutions would be
 \begin{itemize}
  \item personnel fluctuations over the runtime of a CRC,
  \item safe storage for the lifetime of a CRC,
@@ -288,28 +285,26 @@ In addition to traditional workshops and hands-on sessions, the INF project, in 
 Within this course, MatInf serves as one of the central use cases, and students gain not only practical experience working with the system through its REST APIs, but are also deeply involved in evaluating the compliance of such systems with the FAIR principles and discussing possible directions for their future development.
 
 \subsection{Project INF --- Scientific services and data management - \href{https://gepris.dfg.de/gepris/projekt/537324246?language=en}{CRC 1629 Negation in Language and Beyond} - Frankfurt am Main, Tübingen, Göttingen}
-CRC~1629 \emph{Negation in Language and Beyond} (NegLaB) is a Collaborative Research Center that investigates negation as a linguistic and cognitive phenomenon from different empirical and theoretical perspectives.
-Its projects span a wide range of disciplines, including theoretical linguistics, corpus-based research, and experimental work. As a result, CRC~1629 generates very different kinds of data through diverse methodologies and workflows. Within this setting, our project plays a central role by providing RDM, consulting, and teaching. This is particularly important in a humanities CRC, where researchers often work with sensitive data and are usually not formally trained in areas such as data management, data analysis, statistics, or experimental design.
-Our project is interdisciplinary, bringing together the three principal investigators, Alexander Mehler (computer science),
-Manfred Sailer and Sol Lago (linguistics), as well as collaborators from both disciplines,
-including Nasimeh Bahmanian, Giuseppe Abrahami, Andy Lücking, Leon Hammerla, and Mercedes Martinez Bruera.
-This interdisciplinarity is both the project’s major strength and one of its main challenges.
-The challenge is further amplified by the fact that NegLaB’s scientific questions explicitly depend on cross-linguistic and cross-method integration.
-As a result, infrastructure decisions affect not only individual projects, but also how easily results can be compared and integrated across the CRC.
-One important contribution has been the setup of a server that allows CRC members to implement,
-share, and run experiments online using open-source software like PCIbex\cite{zehr_schwarz_2018_pcibex}.
-Additionally, we developed a platform for collecting metadata for each project’s data.
-This was particularly important because the platform had to be flexible enough to accommodate very different types of data,
-including theoretical, experimental, and fieldwork-based materials.
+CRC 1629 \textit{Negation in Language and Beyond} (NegLaB) investigates negation as a grammatical and cognitive phenomenon from different empirical and theoretical perspectives. 
+Its projects span a variety of disciplines, such as theoretical linguistics, corpus-based research as well as experimental work, resulting in a heterogeneous range of methodologies and workflows.
+This diversity challenges and inspires the three principal investigators, Alexander Mehler (computer science), Manfred Sailer, and Sol Lago (linguistics), alongside fellow researchers from these disciplines, including Giuseppe Abrami, Nasimeh Bahmanian, Leon Hammerla, Andy Lücking, and Mercedes Martinez Bruera.
 
-Collaboration with the library services of Goethe University Frankfurt has been an important part of our work.
-Together, we developed a CRC-wide data management policy and established data management plans for each project using the Research Data Management Organiser (RDMO).
-This collaboration has also helped increase the visibility of INF's research data management initiatives, as these have been presented and discussed at events organised by the library services.
-Beyond our host institution, we are in contact with \href{https://www.uni-marburg.de/en/hefdi/about-hefdi}{HefDi},
-which is a Hessen-wide network that offers courses and resources regarding data management, as well as with other linguistics CRCs.
+Our project fulfills a central mission by providing services such as research data management, consulting, and teaching, as well as software development.
+Since the research questions explicitly require the integration of various cross-linguistic and cross-methodological models and concepts, it is crucial to ensure comparability and the ability to reuse data across different projects.
+For this purpose, various platforms are provided as container-based solutions (in Docker and Kubernetes) to ensure sustainability and portability, as well as to extend existing implementations.
+Our \href{https://about.gitlab.com/}{\textit{GitLab}} instance facilitates collaborative software development, while the web-based \href{https://nextcloud.com}{\textit{Nextcloud}} platform enables the storage of research results and provides centralized data backup.
+Concurrently, a container-based server solution was developed for data acquisition, allowing experiments to be configured, shared, and executed online using open-source software such as PCIbex~\cite{Zehr:Schwarz:2018}.
+Furthermore, localized large language models (LLMs) and visual language models (VLMs) can be accessed via an \href{https://openwebui.com/}{\textit{OpenWebUI}} instance, which utilizes a dedicated Nvidia H200 GPU.
+In addition, a \href{https://jupyter.org/hub}{\textit{Jupyter Hub}} (with Single Sign-On) is available for implementing web-based scripts and performing analyses using different models.
+These advancements contribute to the instantiation of reusable software components within the distributed big data infrastructure \textit{DUUI}~\cite{Leonhardt:et:al:2023}, which enables container-based NLP methods, including the LLMs, within cluster solutions~\cite{Abrami:et:al:2025:a}.
+Through DUUI, heterogeneous implementations of methods, data formats~\cite{Hammerla:et:al:2025a}, and modalities~\cite{Bundan:Abrami:Mehler:2025} can be effectively processed, whereby a web- and API-based solution is also available through \textit{DUUIgateway}~\cite{Borkowski:et:al:2026}.
 
-Our main takeaway is how important an INF project is in a humanities CRC: it helps ensure that sensitive and valuable data are handled appropriately, while at the same time giving researchers access to forms of training they would otherwise rarely receive.
-We have also learnt how productive collaboration between computer scientists and linguists can be, as linguists provide fine-grained and theoretically grounded insights into language, while computer scientists contribute more efficient implementations and novel methodological approaches for research.
+For versioning and repurposing of research results, a web-based metadata platform was developed that allows the flexible documentation of various types of information, including theoretical, experimental, and fieldwork-based materials.
+Simultaneously, in collaboration with the library services at Goethe University Frankfurt, a CRC-wide data management protocol was developed and data management plans were established for each project using the Research Data Management Organizer (\href{https://rdmo.uni-frankfurt.de/}{RDMO})~\cite{Bahmanian:et:al:2025}.
+This collaboration has also helped increase the visibility of INF’s research data management initiatives, as these have been presented and discussed at events organized by the library services. 
+
+Our main takeaway is that an INF project is crucial in a humanities CRC: it helps ensure that sensitive and valuable data are handled appropriately, while at the same time giving researchers access to forms of training they would otherwise rarely receive. 
+We have also learned how productive collaboration between computer scientists and linguists can be, as linguists provide fine-grained and theoretically grounded insights into language, while computer scientists contribute more efficient implementations and novel methodological approaches.
 
 \subsection{Project INF --- Information Infrastructure, \href{https://www.sfb1638.de/}{CRC~1638 --- Cellular Membrane Remodelling -- How Changing Form Creates Function}, Heidelberg, Mannheim}
 CRC~1638 investigates cellular membrane remodelling across five institutions, with projects generating data spanning imaging, structural biology, lipidomics, proteomics, and simulations.
@@ -523,7 +518,7 @@ Through its innovative approach and strong interdisciplinary connections, CIDS, 
 to TU Dresden’s reputation in research excellence and digital transformation by addressing the challenges of the data-driven era of science.
 
 \subsection{Surveying the INF projects}
-To corroborate this overview of INF projects we did an informal survey during the workshop and in the weeks after the workshop by spreading the survey.
+To corroborate this overview of INF projects we conducted an informal survey during the workshop and in the weeks after.
 In total, we received around 35 individual answers to the questions that we summarise here.
 When asked how much the original chosen education of the INF project aligned with the domain of the CRC two thirds of participants at least somewhat agreed.
 Also, around two thirds held at least a PhD level education, while a third held a master's or equivalent.
@@ -555,44 +550,43 @@ In the in-person workshop, we led discussions in four separate groups, where we 
 in the following paragraphs.
 
 \subsection{Outreach, Collaboration and Networking}
+
 INF projects are often one of the cross-cutting components within a CRC,
-and as such they play an important part in the collaboration and networking within the project.
-Also, because partners working in INF projects necessarily have to have a higher-level overview of work within the entire CRC,
-they can be valuable partners or even facilitators of outreach of the project.
+and therefore they play an important part in the collaboration and networking within the project.
+Since partners in INF projects necessarily need a higher-level overview of the work across the entire CRC, 
+they can also be valuable partners or even facilitators of project outreach. 
 This section discusses experiences in this important social and cross-disciplinary component of an INF project.
 
 We acknowledge that some of the experiences likely only apply to certain categories of domains.
 However, we also expect that often these are wide enough, \eg~“the natural sciences”, to be interesting to the reader.
-It would be interesting to look at the breadth of applicability of experiences,
-but we do not have enough data to make any such claim, so most of the following has more of an anecdotal character.
-Nevertheless, participants expressed that even sharing those was valuable for them and likely their projects.
+Investigating the breath of applicabiilty would be valuable to do, however we do not have enough data to make such claims. 
+Thus, most of the following has a more anecdotal character. Nevertheless, participants expressed that sharing these experiences 
+was valuable for them, and likely also their projects. 
 
 We start with the usual suspects and their perceived effectiveness, rooted in project management.
 Most projects hold annual status and PhD candidate meetings.
-Both are seen as somewhat useful, but in the end, that frequency is seen as too low.
-In contrast, a quarterly frequency is experienced as much more effective.
-Three months is seen as not too often to get in the way of “regular work”,
-but frequently enough for most projects to provide early feedback and incentivise a timely implementation of agreed-upon targets.
-Most importantly, this frequency is not only seen as more effective than yearly by the INF teams,
+Both are seen as somewhat useful, but their frequency is perceived as too low.
+In contrast, quaterly meetings are experiences as much more effective: 
+three months is not too often to interfere with “regular work”, 
+but frequent enough to provide early feedback and incentivise timely implementation of agreed-upon targets
+Importantly, this frequency is not only seen as more effective by the INF teams,
 but also by the researchers, increasing their engagement with the INF projects.
-Also connected to update intervals, an open development (as opposed to a closed one) eased outreach for multiple INF projects,
-as researchers felt more connected to the work within the INF project.
+Relatedly, open development, as opposed to a closed one, eased outreach for multiple INF projects,
+as researchers felt more connected to the work within the INF project. 
 
 Another topic besides meeting frequency is the choice of contact channels.
-The general agreement within the workshop participants was that there is not a single preferred channel,
-but everyone agreed that the preferred choice is effectively dictated by the channels the researchers within the CRC prefer.
-Especially, social media platforms seem to work well if the targeted research communities already use them.
-Thus, one piece of advice from the workshop is: Investigate the preferred communication and outreach channels of your community and use those.
-While creating networks between non-INF projects was often experienced as easier than between INF and non-INF projects,
-serving and then re-using their communication channels is often very helpful.
+Worlkshop participants agreed that there is no single preffered channel; rather
+the best choise is effectively dictated by the channels the researchers within the CRC already use.
+One piece of advice from the workshop is therefore: investigate the preferred communication and outreach channels of your community, and use those. 
+While creating networks between non-INF projects was often experienced as easier than between INF and non-INF projects, serving and then re-using their communication channels was often helpful.
 
 Generally, meeting formats with a lower (near-work) level seem to work far better than higher-level formats.
 This includes offerings as part of PhD-schools, courses, as well as internal project pairings.
 The closer those are to what researchers perceive as “the actual work”, the more successful they are.
 One of the prerequisites for success, also more generally,
-of these efforts seems to be an explicit backing of such low-level offerings and pairings by the PIs of the project.
-A challenge that stems from this is that new topics within digital research, \eg, tools or methods, can sometimes be relatively easy to introduce on a low-level, but may require substantial persuasion on the level of research-PIs.
-One takeaway point here is that this PI-buy-in can not only be helpful but often is inevitable.
+of these efforts seems to be an explicit backing of such low-level offerings and pairings by the project PIs.
+One resulting is that new topics within digital research, \eg, tools or methods, can sometimes be relatively easy to introduce on a low-level, but may require substantial persuasion on the level of research-PIs.
+One takeaway point here is that this PI-buy-in is not only helpful, but often inevitable
 
 Not surprisingly, general ideas that are close to the Open Science community, and thus to the RDM and RSE communities as well, like the FAIR principles,
 can be hard to convey within some CRCs, especially when the served communities do not put a high value on those themselves.
@@ -639,12 +633,12 @@ For dynamic datasets that change over time, static identifiers alone are often i
 Instead, modular Jupyter notebooks and data chunking strategies are used to document specific states and edge cases, ensuring results can be reconstructed even when the underlying data are not static.
 Furthermore, implementing CI/CD pipelines and automated testing allows for the continuous monitoring of software quality, specifically checking for breaking changes or inconsistencies caused by random seeds and stochastic processes.
 
-Finally, the long-term quality of artefacts depends on the rigorous use of ELNs like \href{https://chemotion.net/}{Chemotion}, eLabFTW, and Sciformation to capture  experimental procedures and data provenance at the point of origin.
+Finally, the long-term quality of artefacts depends on the rigorous use of Electronic Lab Notebooks (ELNs) like \href{https://chemotion.net/}{Chemotion}, eLabFTW, and Sciformation to capture  experimental procedures and data provenance at the point of origin.
 Integrating ELNs with established repositories like \href{https://dataverse.org/}{Dataverse}/\href{https://darus.uni-stuttgart.de/dataverse/darus}{DaRUS} enables structured, metadata-rich publication of experimental data, while version control platforms like GitHub support the parallel management of research software.
 Despite these tools, the workshop highlighted a persistent gap in the quality of researcher-provided metadata, pointing to the need for better training and workflow integration to ensure artefacts remain verifiable and reusable over the long term.
 
 \subsection{Workflows and Pipelines}
-A common topic occurring in INF projects is helping researchers in forming pipelines of the software they use.
+A common topic occurring in INF projects is helping researchers form pipelines of the software they use.
 In this endeavour, especially workflow platforms are particularly beneficial.
 Established examples from various domains are \href{https://galaxyproject.github.io/}{Galaxy}, \href{https://esciencelab.org.uk/products/taverna/}{Taverna}, and \href{https://workflowhub.eu/}{workflowhub}.
 The use of standardised languages like \href{https://www.commonwl.org/}{CWL} would be beneficial, but so far we see a number of languages
@@ -654,7 +648,7 @@ as offered by platforms such as github and gitlab in their CI/CD environments.
 While it would be great to use standardised languages, there are a couple of stumbling blocks that make adoption difficult:\\
 Workflow languages require training.
 Since you have to lay out your steps in a standardised language, you also have to learn it.
-This process is similar to programming, so this requires coding practise.
+This process is similar to programming, and thus requires coding practise.
 Codified pipelines will have version changes, and that can bring the well-known problem of long-term maintenance.
 For some, an issue can be that workflows have to be permitted in the respective domain,
 so it can be that the use of a workflow requires approvals, \eg~by an ethics board or similar.
@@ -699,7 +693,7 @@ Comparing with \cite{mueckschel2006} a couple of other challenges still persist,
 to adapt their platforms to the scientists’ evolving requirements, or how to design platforms that are open and extensible
 while still being easy enough to be accepted by users.
 We have detailed some of these struggles and some of this generation’s solutions in our lessons learnt in \autoref{sec:lessons}.
-Adapting to rapidly changing scientific questions will always be a challenge to the person filling out the role of the INF project in a CRC.
+Adapting to rapidly changing scientific questions will always be a challenge to the people filling out the role of the INF project in a CRC.
 But together with the strong networks they are embedded in\footnote{
 We founded a network for INF projects: \url{https://www.listserv.dfn.de/sympa/info/inf-projects-in-crcs}.
 }, this is a challenge that INF projects everywhere happily take on.

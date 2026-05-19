@@ -713,12 +713,170 @@ journal = {Advanced Engineering Materials},
 doi = {10.1002/adem.202502877}
 }
 
-@article{zehr_schwarz_2018_pcibex,
-  doi = {10.17605/OSF.IO/MD832},
-  url = {https://osf.io/md832/},
-  author = {Zehr,  Jérémy and Schwarz,  Florian},
-  title = {PennController for Internet Based Experiments (IBEX)},
-  publisher = {OSF},
-  year = {2018},
-  copyright = {BSD 3-Clause "New" or "Revised" License}
+@inproceedings{Leonhardt:et:al:2023,
+  title     = {Unlocking the Heterogeneous Landscape of Big Data {NLP} with {DUUI}},
+  author    = {Leonhardt, Alexander and Abrami, Giuseppe and Baumartz, Daniel
+               and Mehler, Alexander},
+  editor    = {Bouamor, Houda and Pino, Juan and Bali, Kalika},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2023},
+  year      = {2023},
+  address   = {Singapore},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2023.findings-emnlp.29},
+  pages     = {385--399},
+  pdf       = {https://aclanthology.org/2023.findings-emnlp.29.pdf},
+  abstract  = {Automatic analysis of large corpora is a complex task, especially
+               in terms of time efficiency. This complexity is increased by the
+               fact that flexible, extensible text analysis requires the continuous
+               integration of ever new tools. Since there are no adequate frameworks
+               for these purposes in the field of NLP, and especially in the
+               context of UIMA, that are not outdated or unusable for security
+               reasons, we present a new approach to address the latter task:
+               Docker Unified UIMA Interface (DUUI), a scalable, flexible, lightweight,
+               and feature-rich framework for automatic distributed analysis
+               of text corpora that leverages Big Data experience and virtualization
+               with Docker. We evaluate DUUI{'}s communication approach against
+               a state-of-the-art approach and demonstrate its outstanding behavior
+               in terms of time efficiency, enabling the analysis of big text
+               data.}
+}
+
+@article{Abrami:et:al:2025:a,
+  title     = {Docker Unified UIMA Interface: New perspectives for NLP on big data},
+  journal   = {SoftwareX},
+  volume    = {29},
+  pages     = {102033},
+  year      = {2025},
+  issn      = {2352-7110},
+  doi       = {https://doi.org/10.1016/j.softx.2024.102033},
+  url       = {https://www.sciencedirect.com/science/article/pii/S2352711024004047},
+  author    = {Giuseppe Abrami and Markos Genios and Filip Fitzermann and Daniel Baumartz
+               and Alexander Mehler},
+  keywords  = {Docker, Kubernetes, UIMA, Distributed NLP, duui},
+  abstract  = {Processing large amounts of natural language text using machine
+               learning-based models is becoming important in many disciplines.
+               This demand is being met by a variety of approaches, resulting
+               in the heterogeneous deployment of separate, partly incompatible,
+               not natively scalable applications. To overcome the technological
+               bottleneck involved, we have developed Docker Unified UIMA Interface,
+               a system for the standardized, parallel, platform-independent,
+               distributed and microservices-based solution for processing large
+               and extensive text corpora with any NLP method. We present DUUI
+               as a framework that enables automated orchestration of GPU-based
+               NLP processes beyond the existing Docker Swarm cluster variant,
+               and in addition to the adaptation to new runtime environments
+               such as Kubernetes. Therefore, a new driver for DUUI is introduced,
+               which enables the lightweight orchestration of DUUI processes
+               within a Kubernetes environment in a scalable setup. In this way,
+               the paper opens up novel text-technological perspectives for existing
+               practices in disciplines that deal with the scientific analysis
+               of large amounts of data based on NLP.}
+}
+
+@inproceedings{Bundan:Abrami:Mehler:2025,
+  author    = {Bundan, Daniel and Abrami, Giuseppe and Mehler, Alexander},
+  title     = {Multimodal Docker Unified {UIMA} Interface: New Horizons for Distributed
+               Microservice-Oriented Processing of Corpora using {UIMA}},
+  booktitle = {Proceedings of the 21st Conference on Natural Language Processing
+               (KONVENS 2025): Long and Short Papers},
+  year      = {2025},
+  editor    = {Wartena, Christian and Heid, Ulrich},
+  location  = {Hildesheim, Germany},
+  address   = {Hannover, Germany},
+  publisher = {HsH Applied Academics},
+  pages     = {257--268},
+  series    = {KONVENS '25},
+  url       = {https://aclanthology.org/2025.konvens-1.22/},
+  pdf       = {https://aclanthology.org/2025.konvens-1.22.pdf}
+}
+
+@inproceedings{Hammerla:et:al:2025a,
+  author    = {Hammerla, Leon and Mehler, Alexander and Abrami, Giuseppe},
+  title     = {Standardizing Heterogeneous Corpora with {DUUR}: A Dual Data-
+               and Process-Oriented Approach to Enhancing NLP Pipeline Integration},
+  editor    = {Inui, Kentaro and Sakti, Sakriani and Wang, Haofen and Wong, Derek F.
+               and Bhattacharyya, Pushpak and Banerjee, Biplab and Ekbal, Asif and Chakraborty, Tanmoy
+               and Singh, Dhirendra Pratap},
+  booktitle = {Proceedings of the 14th International Joint Conference on Natural
+               Language Processing and the 4th Conference of the Asia-Pacific
+               Chapter of the Association for Computational Linguistics},
+  month     = {dec},
+  year      = {2025},
+  address   = {Mumbai, India},
+  publisher = {The Asian Federation of Natural Language Processing and The Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2025.findings-ijcnlp.87/},
+  pages     = {1410--1425},
+  isbn      = {979-8-89176-303-6},
+  abstract  = {Despite their success, LLMs are too computationally expensive
+               to replace task- or domain-specific NLP systems. However, the
+               variety of corpus formats makes reusing these systems difficult.
+               This underscores the importance of maintaining an interoperable
+               NLP landscape. We address this challenge by pursuing two objectives:
+               standardizing corpus formats and enabling massively parallel corpus
+               processing. We present a unified conversion framework embedded
+               in a massively parallel, microservice-based, programming language-independent
+               NLP architecture designed for modularity and extensibility. It
+               allows for the integration of external NLP conversion tools and
+               supports the addition of new components that meet basic compatibility
+               requirements. To evaluate our dual data- and process-oriented
+               approach to standardization, we (1) benchmark its efficiency in
+               terms of processing speed and memory usage, (2) demonstrate the
+               benefits of standardized corpus formats for NLP downstream tasks,
+               and (3) illustrate the advantages of incorporating custom formats
+               into a corpus format ecosystem.}
+}
+
+@article{Borkowski:et:al:2026,
+  title     = {{DUUIgateway}: A Web Service for Platform-independent, Ubiquitous Big Data NLP},
+  journal   = {SoftwareX},
+  volume    = {34},
+  pages     = {102549},
+  year      = {2026},
+  issn      = {2352-7110},
+  doi       = {https://doi.org/10.1016/j.softx.2026.102549},
+  url       = {https://www.sciencedirect.com/science/article/pii/S2352711026000439},
+  author    = {Borkowski, Cedric and Abrami, Giuseppe and Terefe, Dawit and Baumartz, Daniel
+               and Mehler, Alexander},
+  abstract  = {Distributed processing of unstructured text data is a challenge
+               in the rapidly changing and evolving natural language processing
+               (NLP) landscape. This landscape is characterized by heterogeneous
+               systems, models, and formats, and especially by the increasing
+               influence of AI systems. While many of these systems handle text
+               data, there are also unified systems that process multiple input
+               and output formats, while allowing for distributed corpus processing.
+               However, there are hardly any user-friendly interfaces that allow
+               existing NLP frameworks to be used flexibly and extended in a
+               user-controlled manner. Due to this gap and the increasing importance
+               of NLP for various scientific disciplines, there has been a demand
+               for a web and API based flexible software solution for deploying,
+               managing and monitoring NLP systems. Such a solution is provided
+               by Docker Unified UIMA-gateway. We introduce DUUIgateway and evaluate
+               its API and user-driven approach to encapsulation. We also describe
+               how these features improve the usability and accessibility of
+               the NLP framework DUUI. We illustrate DUUIgateway in the field
+               of process modeling in higher education and show how it closes
+               the latter gap in NLP by making a variety of systems for processing
+               text and multimodal data accessible to non-experts.}
+}
+
+
+
+@techreport{Bahmanian:et:al:2025,
+  author    = {Bahmanian, Nasimeh and Martinez Bruera, Mercedes and Lücking, Andy
+               and Hammerla, Leon and Abrami, Giuseppe and Sailer, Manfred and Mehler, Alexander
+               and Lago, Sol},
+  title     = {Data management protocol for CRC 1629},
+  institution = {CRC 1629 NegLaB - INF},
+  year      = {2025},
+  number    = {1},
+  keywords  = {neglab},
+  url       = {https://next.hessenbox.de/index.php/s/zQYBAfeXTJSDaib}
+}
+
+@software{Zehr:Schwarz:2018,
+  author       = {Zehr, Jeremy and Schwarz, Florian},
+  title        = {PennController for Internet Based Experiments (IBEX)},
+  year         = {2018},
+  doi          = {10.17605/OSF.IO/MD832},
+  url          = {https://osf.io/md832/}
 }
